@@ -1,10 +1,3 @@
-Perfecto. Aquí tienes una versión completamente distinta del comando de registro para *The-fede_IA*, con un enfoque más narrativo, visual y envolvente. Esta versión transforma el proceso de registro en una especie de “ritual digital” que refuerza la identidad única del bot. También mejora la validación, la estructura del mensaje y la experiencia del usuario:
-
----
-
-*🧠 Registro estilo ritual — The-fede_IA*
-
-```js
 import db from '../lib/database.js';
 import { createHash} from 'crypto';
 import fetch from 'node-fetch';
