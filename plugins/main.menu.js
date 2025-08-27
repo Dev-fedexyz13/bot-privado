@@ -10,15 +10,13 @@ const handler = async (m, { conn, usedPrefix, command}) => {
     year: 'numeric'
 });
 
-  const tag = {
-    info: '📌 Información',
-    tools: '🧰 Herramientas',
-    fun: '🎮 Diversión',
-    media: '🖼️ Multimedia',
-    ai: '🧠 Inteligencia',
-    group: '👥 Grupo',
-    owner: '🔒 Propietario',
-    premium: '💎 Premium'
+  const tags = {
+  main: toSerifBold('🌸 𝖬𝖾𝗇𝗎 𝖾𝗇𝖼𝖺𝗇𝗍𝖺𝖽𝗈'),
+  group: toSerifBold('👥 𝖬𝖺𝗀𝗂𝖺 𝗀𝗋𝗎𝗉𝖺𝗅'),
+  serbot: toSerifBold('🪄 𝖲𝗎𝖻 𝖡𝗈𝗍𝗌 & 𝖢𝗅𝗈𝗇𝖾𝗌'),
+  tools: toSerifBold('🔧 𝖧𝖾𝖈𝗁𝗂𝗓𝗈𝗌 𝗎́𝗍𝗂𝗅𝗂𝗌'),
+  kawaii: toSerifBold('🎀 𝖠𝗇𝗂𝗆𝖾 & 𝖪𝖺𝗐𝖺𝗂𝗂'),
+  descargas: toSerifBold('📥 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌 𝗆𝖺́𝗀𝗂𝖼𝖺𝗌')
 };
 
   const menu = `
@@ -33,8 +31,7 @@ const handler = async (m, { conn, usedPrefix, command}) => {
 
 ${Object.entries(tag).map(([k, v]) => `• ${v} → *${usedPrefix}menu ${k}*`).join('\n')}
 
-📎 Usa *${usedPrefix}menu <categoría>* para ver comandos específicos.
-🔧 Ejemplo: *${usedPrefix}menu ai*
+> © ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥ㅤ🍁
 `;
 
   await conn.sendMessage(m.chat, {
