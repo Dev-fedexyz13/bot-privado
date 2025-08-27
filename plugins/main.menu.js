@@ -52,6 +52,13 @@ ${taguser}, ${saludo}
     await conn.sendMessage(m.chat, {
       video: { url: video},
       caption: menu,
+      buttons: [
+        {
+          buttonId: '.reg user.17',
+          buttonText: { displayText: '📝 Registrarme'},
+          type: 1
+}
+      ],
       contextInfo: {
         mentionedJid: [m.sender],
         isForwarded: true,
@@ -81,27 +88,19 @@ export default handler;
 
 // 🕰️ Saludo contextual
 function ucapan() {
-    const time = moment.tz('America/Lima').format('HH')
-    let res = "Lɪɴᴅᴀ Nᴏᴄʜᴇ 🌉"
-    if (time >= 5) {
-        res = "Bᴜᴇɴᴀ Mᴀᴅʀᴜɢᴀᴅᴀ 🏙️"
-    }
-    if (time > 10) {
-        res = "Bᴜᴇɴ Dɪ́ᴀ 🏞️"
-    }
-    if (time >= 12) {
-        res = "Hᴇʀᴍᴏsᴀ Tᴀʀᴅᴇ 🌆"
-    }
-    if (time >= 19) {
-        res = "Lɪɴᴅᴀ Nᴏᴄʜᴇ 🌃"
-    }
-    return res
+  const time = moment.tz('America/Lima').format('HH');
+  if (time>= 5 && time < 11) return 'Bᴜᴇɴᴀ Mᴀᴅʀᴜɢᴀᴅᴀ 🏙️';
+  if (time>= 11 && time < 17) return 'Bᴜᴇɴ Dɪ́ᴀ 🏞️';
+  if (time>= 17 && time < 20) return 'Hᴇʀᴍᴏsᴀ Tᴀʀᴅᴇ 🌆';
+  return 'Lɪɴᴅᴀ Nᴏᴄʜᴇ 🌃';
 }
 
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
+const more = String.fromCharCode(8206);
+const readMore = more.repeat(4001);
+
 function clockString(ms) {
-let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+  let h = isNaN(ms)? '--': Math.floor(ms / 3600000);
+  let m = isNaN(ms)? '--': Math.floor(ms / 60000) % 60;
+  let s = isNaN(ms)? '--': Math.floor(ms / 1000) % 60;
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':');
+}
