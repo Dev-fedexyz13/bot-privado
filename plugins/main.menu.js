@@ -20,11 +20,11 @@ let handler = async (m, { conn, text, command}) => {
 ${taguser}, ${saludo}
 
 *╭─「 𝖮𝖻𝗂𝗍𝗈 𝖬𝖤𝖭𝖴 」─╮*
-│ 🕶️ *Identidad:* 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣
-│ 🧠 *Versión:* 1.1.1
+│ 🕶️ *𝖡𝗈𝗍:* 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣*
+│ 🧠 *Versión:* 1.1.1-(Beta)
 │ 🕰️ *Hora:* ${hora}
 │ 📆 *Fecha:* ${fecha}
-│ 👤 *Creador:* *𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥*
+│ 👤 *Creador:* *𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓*
 ╰──────────────────╯
 
 *🩸 Estado: Operativo*
@@ -32,21 +32,26 @@ ${taguser}, ${saludo}
 *📡 Modo: Silencio estratégico*
 
 ╭─「 𝖨𝖭𝖥𝖮 」─╮
-🍁 #menu
-🍁 #unreg
-🍁 #reg user.17
+🍁 ${usedPrefix}menu
+🍁 ${usedPrefix}unreg
+🍁 ${usedPrefix}reg
 ╰──────────────╯
 
 ╭─「 SEARCH 」─╮
-🍁 #tiktoks
-🍁 #tiktoksearch
-🍁 #
+🍁 ${usedPrefix}tiktoks
+🍁 ${usedPrefix}tiktoksearch
+🍁 ${usedPrefix}
 ╰──────────────╯
 
 ╭─「 BUSCADOR 」─╮
-🍁 #Imagen #img
-🍁 #
-🍁 #
+🍁 ${usedPrefix}imagen
+🍁 ${usedPrefix}img
+🍁 ${usedPrefix}
+╰──────────────╯
+╭─「 SEARCH 」─╮
+🍁 ${usedPrefix}sticker
+🍁 ${usedPrefix}s
+🍁 
 ╰──────────────╯`.trim();
 
     await conn.sendMessage(m.chat, {
