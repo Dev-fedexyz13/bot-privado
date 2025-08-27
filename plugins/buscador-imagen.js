@@ -5,8 +5,8 @@ import baileys from '@whiskeysockets/baileys';
 const packname = '𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣';
 const dev = '𝖥𝖾𝖽𝖾';
 const icono = 'https://i.imgur.com/JP52fdP.jpeg';
-const redes = 'https://instagram.com/thefede_ia';
 const portada = 'https://files.cloudkuimages.guru/images/BOX7T4AJ.jpg';
+const redes = 'https://instagram.com/thefede_ia';
 
 async function sendAlbumMessage(jid, medias, options = {}) {
   if (typeof jid!== 'string') throw new TypeError(`jid debe ser string, recibido: ${typeof jid}`);
@@ -41,21 +41,36 @@ async function sendAlbumMessage(jid, medias, options = {}) {
 }
 
 const handler = async (m, { conn, text}) => {
-  if (!text) return conn.reply(m.chat, '🌑 Ingresa un texto para buscar imágenes.', m);
-
   await m.react('🕒');
 
-  // 📸 Imagen destacada antes del álbum
-  await conn.sendMessage(m.chat, {
-    image: { url: portada},
-    caption: `🌑 *_𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣* te acompaña en tu búsqueda..._\n🔍 *Consulta:* ${text}`,
+  if (!text) {
+    await conn.sendMessage(m.chat, {
+      image: { url: portada},
+      caption: `🌑 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣* está listo para buscar imágenes.\n\n❀ *Escribe lo que deseas buscar.*`,
+      contextInfo: {
+        externalAdReply: {
+          mediaUrl: redes,
+          mediaType: 1,
+          showAdAttribution: true,
+          title: packname,
+          body: dev,
+          thumbnail: icono,
+          sourceUrl: redes
+}
+}
+});
+    return;
+}
+
+  conn.reply(m.chat, '✧ *Buscando imágenes...*', m, {
     contextInfo: {
       externalAdReply: {
-        mediaUrl: redes,
+        mediaUrl: null,
         mediaType: 1,
         showAdAttribution: true,
         title: packname,
         body: dev,
+        previewType: 0,
         thumbnail: icono,
         sourceUrl: redes
 }
