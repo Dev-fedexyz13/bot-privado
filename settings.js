@@ -17,7 +17,7 @@ global.botNumber = '' //Ejemplo: 573218138672
 
 global.owner = [
 // <-- Número @s.whatsapp.net -->
-  ['5491156178758', '🜲 Propietario 🜲', true],
+  ['5491156178758', '𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥', true],
 ];
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -39,13 +39,13 @@ global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '🎄 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾 - 𝖨𝖠 🍁'
-global.botname = '𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠'
-global.wm = '🎄 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 🎋'
-global.author = '© mᥲძᥱ 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥ㅤ🍂'
+global.packname = '🎄 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍 • 𝖬𝖣 🍁'
+global.botname = '𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣'
+global.wm = '🎄 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 🎋'
+global.author = '© mᥲძᥱ ᑲᥡ 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥ㅤ🍂'
 global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥ㅤ🍁'
 global.textbot = '🎄 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾 - 𝖨𝖠  | 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥'
-global.etiqueta = '🎄 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 🎋'
+global.etiqueta = '🎄 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 🎋'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
