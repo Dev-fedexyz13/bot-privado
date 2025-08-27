@@ -10,26 +10,36 @@ const handler = async (m, { conn, usedPrefix, command}) => {
     year: 'numeric'
 });
 
-  const tags = {
-  main: toSerifBold('🌸 𝖬𝖾𝗇𝗎 𝖾𝗇𝖼𝖺𝗇𝗍𝖺𝖽𝗈'),
-  group: toSerifBold('👥 𝖬𝖺𝗀𝗂𝖺 𝗀𝗋𝗎𝗉𝖺𝗅'),
-  serbot: toSerifBold('🪄 𝖲𝗎𝖻 𝖡𝗈𝗍𝗌 & 𝖢𝗅𝗈𝗇𝖾𝗌'),
-  tools: toSerifBold('🔧 𝖧𝖾𝖈𝗁𝗂𝗓𝗈𝗌 𝗎́𝗍𝗂𝗅𝗂𝗌'),
-  kawaii: toSerifBold('🎀 𝖠𝗇𝗂𝗆𝖾 & 𝖪𝖺𝗐𝖺𝗂𝗂'),
-  descargas: toSerifBold('📥 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌 𝗆𝖺́𝗀𝗂𝖼𝖺𝗌')
+  const tag = {
+    main: '🌸 𝖬𝖾𝗇𝗎 𝖾𝗇𝖼𝖺𝗇𝗍𝖺𝖽𝗈',
+    group: '👥 𝖬𝖺𝗀𝗂𝖺 𝗀𝗋𝗎𝗉𝖺𝗅',
+    serbot: '🪄 𝖲𝗎𝖻 𝖡𝗈𝗍𝗌 & 𝖢𝗅𝗈𝗇𝖾𝗌',
+    tools: '🔧 𝖧𝖾𝖈𝗁𝗂𝗓𝗈𝗌 𝗎́𝗍𝗂𝗅𝗂𝗌',
+    kawaii: '🎀 𝖠𝗇𝗂𝗆𝖾 & 𝖪𝖺𝗐𝖺𝗂𝗂',
+    descargas: '📥 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌 𝗆𝖺́𝗀𝗂𝖼𝖺𝗌'
+};
+
+  const categoryFormat = {
+    readmore: `%readmore`.trim(),
+    header: '\n`%category 乂`\n',
+    body: '.🍂.𖦹˙ %cmd %iscorazones %isPremium',
+    footer: '\n',
+    after: ``
 };
 
   const menu = `
-╭─〔 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠: Menú Principal 〕─╮
+╭──●〔 Menú Principal 〕●──╮
 📅 Fecha: ${fecha}
-👤 Usuario: ${userName}
+👤 Nombre: ${userName}
 🎂 Edad: ${age || 'No definida'}
 🧾 Registrado: ${isRegistered}
-╰─────────────────────╯
+╰────────────────────╯
 
 📂 Categorías disponibles:
 
 ${Object.entries(tag).map(([k, v]) => `• ${v} → *${usedPrefix}menu ${k}*`).join('\n')}
+
+${categoryFormat.readmore}
 
 > © ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥ㅤ🍁
 `;
