@@ -1,30 +1,17 @@
 import axios from 'axios';
 
 const MAX = 280 * 1024 * 1024;
-const HEAVY = 100 * 1024 * 1024;
 let isBusy = false;
 
-const isValid = url =>
-  /youtu\.?be/.test(url);
+const isValid = u => /youtu\.?be/.test(u);
+const format = b => ['B','KB','MB','GB'].reduce((r, u, i) => b < 1024 ** (i + 1)? r || `${(b / 1024 ** i).toFixed(2)} ${u}`: r, '');
 
-const format = b => {
-  const u = ['B','KB','MB','GB'];
-  let i = 0;
-  while (b>= 1024 && i < u.length - 1) b /= 1024, i++;
-  return `${b.toFixed(2)} ${u[i]}`;
-};
+const getSize = async u => parseInt((await axios.head(u)).headers['content-length'], 10);
 
-const getSize = async url => {
-  const r = await axios.head(url);
-  return parseInt(r.headers['content-length'], 10);
-};
-
-const ytdl = async url => {
-  const id = url.match(/(?:v=|\/)([\w\-_]{11})/)?.[1];
-  if (!id) throw 'ID inválido';
+const fetchMedia = async (id, type) => {
   const h = { referer: 'https://id.ytmp3.mobi/'};
-  const i = await (await fetch(`https://d.ymcdn.org/api/v1/init?p=y&_=${Date.now()}`, { headers: h})).json();
-  const c = await (await fetch(`${i.convertURL}&v=${id}&f=mp4&_=${Date.now()}`, { headers: h})).json();
+  const i = await (await fetch(`https://d.ymcdn.org/api/v1/init?p=${type}&_=${Date.now()}`, { headers: h})).json();
+  const c = await (await fetch(`${i.convertURL}&v=${id}&f=${type}&_=${Date.now()}`, { headers: h})).json();
   for (let j = 0; j < 3; j++) {
     const p = await (await fetch(c.progressURL, { headers: h})).json();
     if (p.progress === 3) return { url: c.downloadURL, title: p.title};
@@ -33,24 +20,25 @@ const ytdl = async url => {
   throw 'No se pudo convertir';
 };
 
-const handler = async (m, { conn, text}) => {
+const handler = async (m, { conn, text, command}) => {
   if (!text ||!isValid(text)) return m.reply('🔗 Enlace inválido');
-
   if (isBusy) return m.reply('⏳ Espera, estoy procesando otro archivo');
   isBusy = true;
 
   try {
-    const { url, title} = await ytdl(text);
+    const id = text.match(/(?:v=|\/)([\w\-_]{11})/)?.[1];
+    const type = command.includes('mp3')? 'y': 'v';
+    const { url, title} = await fetchMedia(id, type);
     const size = await getSize(url);
     if (size> MAX) throw '📦 Archivo demasiado grande';
 
-    const caption = `🎬 *${title}*\n📦 *${format(size)}*\n🤖 *𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠*`;
+    const caption = `🎶 *${title}*\n📦 *${format(size)}*\n🤖 *𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠*`;
     const buffer = await fetch(url).then(r => r.buffer());
 
-    await conn.sendFile(m.chat, buffer, `${title}.mp4`, caption, m, null, {
-      mimetype: 'video/mp4',
-      asDocument: size> HEAVY,
-      filename: `${title}.mp4`
+    await conn.sendFile(m.chat, buffer, `${title}.${type === 'y'? 'mp3': 'mp4'}`, caption, m, null, {
+      mimetype: type === 'y'? 'audio/mpeg': 'video/mp4',
+      asDocument: size> 70 * 1024 * 1024,
+      filename: `${title}.${type === 'y'? 'mp3': 'mp4'}`
 });
 
 } catch (e) {
@@ -60,7 +48,7 @@ const handler = async (m, { conn, text}) => {
 }
 };
 
-handler.command = ['ytmp4'];
+handler.command = ['ytmp3', 'ytmp4'];
 handler.tags = ['descargas'];
 handler.black = true;
 
