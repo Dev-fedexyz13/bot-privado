@@ -32,10 +32,15 @@ ${taguser}, ${saludo}
 *📡 Modo: Silencio estratégico*
 
 ╭─「 𝖨𝖭𝖥𝖮 」─╮
-🍁 Comando #1
-🍁 Comando #2
-🍁 Comando #3
-🍁 Comando #4
+🍁 #menu
+🍁 #
+🍁 #
+╰──────────────╯
+
+╭─「 SEARCH 」─╮
+🍁 #tiktoks
+🍁 #tiktoksearch
+🍁 #
 ╰──────────────╯`.trim();
 
     await conn.sendMessage(m.chat, {
