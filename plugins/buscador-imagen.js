@@ -40,9 +40,9 @@ async function sendAlbumMessage(jid, medias, options = {}) {
 }
 
 const handler = async (m, { conn, text}) => {
-  if (!text) return conn.reply(m.chat, '🌑 Ingresa un texto para buscar imágenes.', m, rcanal');
+  if (!text) return conn.reply(m.chat, '🌑 Ingresa un texto para buscar imágenes.', m);
 
-  await m.react('🕒');
+  await m.react('⌛');
   conn.reply(m.chat, '✧ *Buscando imágenes...*', m, {
     contextInfo: {
       externalAdReply: {
@@ -67,35 +67,9 @@ const handler = async (m, { conn, text}) => {
       if (img) images.push({ type: 'image', data: { url: img}});
 }
 
-    if (images.length < 2) return conn.reply(m.chat, '⚔ No se encontraron suficientes imágenes para crear un álbum.', m);
-
-    const caption = `🍁 Resultados de: ${text}`;
-    await sendAlbumMessage(m.chat, images, { caption, quoted: m});
-
-    await m.react('✅');
-} catch (error) {
-    await m.react('❌');
-    conn.reply(m.chat, `⚠︎ Error al obtener imágenes: ${error.message}`, m);
-}
-};
-
-handler.help = ['imagen <texto>'];
-handler.tags = ['buscador', 'tools', 'descargas'];
-handler.command = ['imagen', 'image', 'img'];
-handler.register = true;
-
-export default handler;  try {
-    const res = await googleImage(text);
-    const images = [];
-
-    for (let i = 0; i < 10; i++) {
-      const img = await res.getRandom();
-      if (img) images.push({ type: 'image', data: { url: img}});
-}
-
     if (images.length < 2) return conn.reply(m.chat, '✧ No se encontraron suficientes imágenes para crear un álbum.', m);
 
-    const caption = `❀ *Resultados para:* ${text}`;
+    const caption = `🍁 Resultados de: ${text}`;
     await sendAlbumMessage(m.chat, images, { caption, quoted: m});
 
     await m.react('✅');
