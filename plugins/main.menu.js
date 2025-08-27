@@ -54,8 +54,8 @@ ${taguser}, ${saludo}
       caption: menu,
       buttons: [
         {
-          buttonId: '.reg user.17',
-          buttonText: { displayText: '📝 Registrarme'},
+          buttonId: '.reg SINNOMBRE.17',
+          buttonText: { displayText: '🌑 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱'},
           type: 1
 }
       ],
