@@ -31,36 +31,28 @@ ${taguser}, ${saludo}
 ⚔️ *Clan:* Uchiha Protocol
 📡 *Modo:* Silencio estratégico
 
-˚📂｡
-
 ╭─「 𝖨𝖭𝖥𝖮 」─╮
 🍁 ${usedPrefix}menu
 🍁 ${usedPrefix}unreg
-🍁 ${usedPrefix}reg user.17
+🍁 ${usedPrefix}reg
 ╰──────────────╯
 
-˚🔍｡
-
-╭─「 𝖲𝖤𝖠𝖱𝖢𝖧 」─╮
+╭─「 SEARCH 」─╮
 🍁 ${usedPrefix}tiktoks
 🍁 ${usedPrefix}tiktoksearch
-🍁 ${usedPrefix}ytsearch
+🍁 
 ╰──────────────╯
 
-˚🖼｡
-
-╭─「 𝖨𝖬Á𝖦𝖤𝖭𝖤𝖲 」─╮
+╭─「 BUSCADOR 」─╮
 🍁 ${usedPrefix}imagen
 🍁 ${usedPrefix}img
-🍁 ${usedPrefix}wallpaper
+🍁
 ╰──────────────╯
 
-˚🧾｡
-
-╭─「 𝖤𝖲𝖳𝖠𝖣𝖮 」─╮
-🍁 ${usedPrefix}status
-🍁 ${usedPrefix}ping
-🍁 ${usedPrefix}tiempo
+╭─「 SEARCH 」─╮
+🍁 ${usedPrefix}sticker
+🍁 ${usedPrefix}s
+🍁 
 ╰──────────────╯
 `.trim();
 
