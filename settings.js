@@ -52,7 +52,7 @@ global.etiqueta = '🎄 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 🎋'
 global.moneda = 'ObiCoins 💸'
 global.welcom1 = '🌑 Edita Con El Comando setwelcome'
 global.welcom2 = '🌑 Edita Con El Comando setbye'
-global.banner = 'https://files.cloudkuimages.guru/images/BOX7T4AJ.jpg'
+global.banner = 'https://files.cloudkuimages.guru/images/wn5uChxB.jpg'
 global.avatar = 'https://files.cloudkuimages.guru/images/BOX7T4AJ.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
