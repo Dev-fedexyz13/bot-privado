@@ -16,7 +16,7 @@ global.botNumber = '' //Ejemplo: 573218138672
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-// <-- Número @s.whatsapp.net -->
+// .<<al editar esto pon tu número.>>
   ['5491156178758', '𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥', true],
 ];
 
@@ -49,11 +49,11 @@ global.etiqueta = '🎄 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 🎋'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.moneda = 'conis 💸'
-global.welcom1 = '❍ Edita Con El Comando setwelcome'
-global.welcom2 = '❍ Edita Con El Comando setbye'
-global.banner = 'https://files.catbox.moe/r4w38m.jpg'
-global.avatar = 'https://files.catbox.moe/r4w38m.jpg'
+global.moneda = 'ObiCoins 💸'
+global.welcom1 = '🌑 Edita Con El Comando setwelcome'
+global.welcom2 = '🌑 Edita Con El Comando setbye'
+global.banner = 'https://files.cloudkuimages.guru/images/BOX7T4AJ.jpg'
+global.avatar = 'https://files.cloudkuimages.guru/images/BOX7T4AJ.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
