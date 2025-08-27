@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import moment from 'moment-timezone';
 import { join} from 'path';
 
-let handler = async (m, { conn, text, command}) => {
+let handler = async (m, { conn, text, command, usedPrefix}) => {
   try {
     await m.react('🌑');
 
@@ -16,50 +16,60 @@ let handler = async (m, { conn, text, command}) => {
     const video = ['https://files.cloudkuimages.guru/videos/9yNRmc4K.mp4'].getRandom();
 
     const menu = `
-🌑 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣* te saluda...
+˚🌑｡ *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣* te saluda...
 ${taguser}, ${saludo}
 
-*╭─「 𝖮𝖻𝗂𝗍𝗈 𝖬𝖤𝖭𝖴 」─╮*
-│ 🕶️ *𝖡𝗈𝗍:* 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣*
-│ 🧠 *Versión:* 1.1.1-(Beta)
+╭─「 𝖨𝖣𝖤𝖭𝖳𝖨𝖣𝖠𝖣 」─╮
+│ 🕶️ *Bot:* 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣
+│ 🧠 *Versión:* 1.1.1 (Beta)
 │ 🕰️ *Hora:* ${hora}
 │ 📆 *Fecha:* ${fecha}
-│ 👤 *Creador:* *𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓*
-╰──────────────────╯
+│ 👤 *Creador:* 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓
+╰────────────────────╯
 
-*🩸 Estado: Operativo*
-*⚔️ Clan: Uchiha Protocol*
-*📡 Modo: Silencio estratégico*
+🩸 *Estado:* Operativo
+⚔️ *Clan:* Uchiha Protocol
+📡 *Modo:* Silencio estratégico
+
+˚📂｡
 
 ╭─「 𝖨𝖭𝖥𝖮 」─╮
 🍁 ${usedPrefix}menu
 🍁 ${usedPrefix}unreg
-🍁 ${usedPrefix}reg
+🍁 ${usedPrefix}reg user.17
 ╰──────────────╯
 
-╭─「 SEARCH 」─╮
+˚🔍｡
+
+╭─「 𝖲𝖤𝖠𝖱𝖢𝖧 」─╮
 🍁 ${usedPrefix}tiktoks
 🍁 ${usedPrefix}tiktoksearch
-🍁 ${usedPrefix}
+🍁 ${usedPrefix}ytsearch
 ╰──────────────╯
 
-╭─「 BUSCADOR 」─╮
+˚🖼｡
+
+╭─「 𝖨𝖬Á𝖦𝖤𝖭𝖤𝖲 」─╮
 🍁 ${usedPrefix}imagen
 🍁 ${usedPrefix}img
-🍁 ${usedPrefix}
+🍁 ${usedPrefix}wallpaper
 ╰──────────────╯
-╭─「 SEARCH 」─╮
-🍁 ${usedPrefix}sticker
-🍁 ${usedPrefix}s
-🍁 
-╰──────────────╯`.trim();
+
+˚🧾｡
+
+╭─「 𝖤𝖲𝖳𝖠𝖣𝖮 」─╮
+🍁 ${usedPrefix}status
+🍁 ${usedPrefix}ping
+🍁 ${usedPrefix}tiempo
+╰──────────────╯
+`.trim();
 
     await conn.sendMessage(m.chat, {
       video: { url: video},
       caption: menu,
       buttons: [
         {
-          buttonId: '.reg SINNOMBRE.17',
+          buttonId: `${usedPrefix}reg SINNOMBRE.17`,
           buttonText: { displayText: '🌑 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱'},
           type: 1
 }
