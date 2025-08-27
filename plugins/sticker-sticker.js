@@ -9,7 +9,7 @@ let handler = async (m, { conn, args}) => {
   let stiker = null;
   const quoted = m.quoted || m;
   const mime = (quoted.msg || quoted).mimetype || quoted.mediaType || '';
-  const pack = global.packsticker || 'The-fede_IA';
+  const pack = global.packsticker || '🍂 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 🍁';
   const author = global.author || 'SubBot';
 
   try {
