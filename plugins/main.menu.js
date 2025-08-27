@@ -25,12 +25,12 @@ const tags = {
 
 const defaultMenu = {
   before: `
-╭─〔 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 〕─╮
+╭──●〔 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 〕●──╮
 👤 Nombre: *%name*
 🎀 Nivel: *%level*
 📈 Registro: *%totalreg*
 🕐 Activo: *%muptime*
-╰────────────────╯
+╰───────────────╯
 %readmore`.trim(),
   header: '\n`%category 乂`\n',
   body: '.🍂.𖦹˙ %cmd',
@@ -72,7 +72,7 @@ let handler = async (m, { conn, usedPrefix}) => {
 
   const text = menuText.replace(/%(\w+)/g, (_, key) => replace[key] || '');
 
-  const imageURL = 'https://files.catbox.moe/rkvuzb.jpg';
+  const imageURL = 'https://files.catbox.moe/r4w38m.jpg';
   const imgBuffer = await fetch(imageURL).then(res => res.buffer());
 
   await conn.sendMessage(m.chat, {
