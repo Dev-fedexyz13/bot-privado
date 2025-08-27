@@ -2,10 +2,9 @@ import { googleImage} from '@bochilteam/scraper';
 import baileys from '@whiskeysockets/baileys';
 
 // 🔧 Personalización del bot
-const packname = '𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣';
+const packname = '𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠';
 const dev = '𝖥𝖾𝖽𝖾';
 const icono = 'https://i.imgur.com/JP52fdP.jpeg';
-const portada = 'https://files.cloudkuimages.guru/images/BOX7T4AJ.jpg';
 const redes = 'https://instagram.com/thefede_ia';
 
 async function sendAlbumMessage(jid, medias, options = {}) {
@@ -41,27 +40,9 @@ async function sendAlbumMessage(jid, medias, options = {}) {
 }
 
 const handler = async (m, { conn, text}) => {
+  if (!text) return conn.reply(m.chat, '🌑 Ingresa un texto para buscar imágenes.', m, rcanal');
+
   await m.react('🕒');
-
-  if (!text) {
-    await conn.sendMessage(m.chat, {
-      image: { url: portada},
-      caption: `🌑 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣* está listo para buscar imágenes.\n\n❀ *Escribe lo que deseas buscar.*`,
-      contextInfo: {
-        externalAdReply: {
-          mediaUrl: redes,
-          mediaType: 1,
-          showAdAttribution: true,
-          title: packname,
-          body: dev,
-          thumbnail: icono,
-          sourceUrl: redes
-}
-}
-});
-    return;
-}
-
   conn.reply(m.chat, '✧ *Buscando imágenes...*', m, {
     contextInfo: {
       externalAdReply: {
@@ -78,6 +59,32 @@ const handler = async (m, { conn, text}) => {
 });
 
   try {
+    const res = await googleImage(text);
+    const images = [];
+
+    for (let i = 0; i < 10; i++) {
+      const img = await res.getRandom();
+      if (img) images.push({ type: 'image', data: { url: img}});
+}
+
+    if (images.length < 2) return conn.reply(m.chat, '⚔ No se encontraron suficientes imágenes para crear un álbum.', m);
+
+    const caption = `🍁 Resultados de: ${text}`;
+    await sendAlbumMessage(m.chat, images, { caption, quoted: m});
+
+    await m.react('✅');
+} catch (error) {
+    await m.react('❌');
+    conn.reply(m.chat, `⚠︎ Error al obtener imágenes: ${error.message}`, m);
+}
+};
+
+handler.help = ['imagen <texto>'];
+handler.tags = ['buscador', 'tools', 'descargas'];
+handler.command = ['imagen', 'image', 'img'];
+handler.register = true;
+
+export default handler;  try {
     const res = await googleImage(text);
     const images = [];
 
