@@ -41,6 +41,12 @@ ${taguser}, ${saludo}
 🍁 #tiktoks
 🍁 #tiktoksearch
 🍁 #
+╰──────────────╯
+
+╭─「 BUSCADOR 」─╮
+🍁 #Imagen #img
+🍁 #
+🍁 #
 ╰──────────────╯`.trim();
 
     await conn.sendMessage(m.chat, {
