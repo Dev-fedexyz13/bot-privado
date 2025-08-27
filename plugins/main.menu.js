@@ -1,68 +1,87 @@
-const handler = async (m, { conn, usedPrefix, command}) => {
-  const { name, age, registered, exp, coin, joincount} = global.db.data.users[m.sender];
-  const userName = name || m.pushName || 'Usuario';
-  const isRegistered = registered? '✅ Sí': '❌ No';
-  const level = Math.floor(exp / 100);
-  const fecha = new Date().toLocaleDateString('es-ES', {
-    weekday: 'long',
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric'
-});
+import fetch from 'node-fetch';
+import moment from 'moment-timezone';
 
-  const tag = {
-    main: '🌸 𝖬𝖾𝗇𝗎 𝖾𝗇𝖼𝖺𝗇𝗍𝖺𝖽𝗈',
-    group: '👥 𝖬𝖺𝗀𝗂𝖺 𝗀𝗋𝗎𝗉𝖺𝗅',
-    serbot: '🪄 𝖲𝗎𝖻 𝖡𝗈𝗍𝗌 & 𝖢𝗅𝗈𝗇𝖾𝗌',
-    tools: '🔧 𝖧𝖾𝖈𝗁𝗂𝗓𝗈𝗌 𝗎́𝗍𝗂𝗅𝗂𝗌',
-    kawaii: '🎀 𝖠𝗇𝗂𝗆𝖾 & 𝖪𝖺𝗐𝖺𝗂𝗂',
-    descargas: '📥 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌 𝗆𝖺́𝗀𝗂𝖼𝖺𝗌'
+const toSerifBold = text => text.replace(/[a-zA-Z]/g, c =>
+  String.fromCodePoint(c.codePointAt(0) + (c>= 'a'? 0x1D3A: 0x1D3A)));
+
+const tags = {
+  main: toSerifBold('🌸 Menú Encantado'),
+  tools: toSerifBold('🔧 Hechizos Útiles'),
+  kawaii: toSerifBold('🎀 Anime & Kawaii'),
+  group: toSerifBold('👥 Magia Grupal')
 };
 
-  const categoryFormat = {
-    readmore: `%readmore`.trim(),
-    header: '\n`%category 乂`\n',
-    body: '.🍂.𖦹˙ %cmd %iscorazones %isPremium',
-    footer: '\n',
-    after: ``
+const defaultMenu = {
+  before: `
+╭─〔 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 〕─╮
+👤 Nombre: *%name*
+🎀 Nivel: *%level*
+📈 Registro: *%totalreg*
+🕐 Activo: *%muptime*
+╰────────────────╯
+%readmore`.trim(),
+  header: '\n`%category 乂`\n',
+  body: '.🍂.𖦹˙ %cmd',
+  footer: '\n',
+  after: ''
 };
 
-  const menu = `
-╭──●〔 Menú Principal 〕●──╮
-📅 Fecha: ${fecha}
-👤 Nombre: ${userName}
-🎂 Edad: ${age || 'No definida'}
-🧾 Registrado: ${isRegistered}
-╰────────────────────╯
+let handler = async (m, { conn, usedPrefix}) => {
+  const name = await conn.getName(m.sender);
+  const level = global.db.data.users[m.sender]?.level || 0;
+  const totalreg = Object.keys(global.db.data.users).length;
+  const muptime = clockString(process.uptime() * 1000);
 
-📂 Categorías disponibles:
+  const help = Object.values(global.plugins).filter(p =>!p.disabled).map(p => ({
+    help: Array.isArray(p.help)? p.help: [p.help],
+    tags: Array.isArray(p.tags)? p.tags: [p.tags]
+}));
 
-${Object.entries(tag).map(([k, v]) => `• ${v} → *${usedPrefix}menu ${k}*`).join('\n')}
+  const { before, header, body, footer, after} = defaultMenu;
 
-${categoryFormat.readmore}
+  let menuText = [
+    before,
+...Object.keys(tags).map(tag =>
+      `${header.replace(/%category/g, tags[tag])}` +
+      help.filter(p => p.tags.includes(tag)).map(p =>
+        p.help.map(cmd => body.replace(/%cmd/g, usedPrefix + cmd)).join('\n')
+).join('\n') + footer
+),
+    after
+  ].join('\n');
 
-> © ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥ㅤ🍁
-`;
+  const replace = {
+    name,
+    level,
+    totalreg,
+    muptime,
+    readmore: String.fromCharCode(8206).repeat(4001)
+};
+
+  const text = menuText.replace(/%(\w+)/g, (_, key) => replace[key] || '');
+
+  const imageURL = 'https://files.catbox.moe/r4w38m.jpg';
+  const imgBuffer = await fetch(imageURL).then(res => res.buffer());
 
   await conn.sendMessage(m.chat, {
-    text: menu.trim(),
+    image: imgBuffer,
+    caption: text,
     contextInfo: {
-      externalAdReply: {
-        title: '✦ Panel de Comandos ✦',
-        body: 'Explora las funciones de The-fede_IA',
-        thumbnailUrl: 'https://files.catbox.moe/r4w38m.jpg',
-        sourceUrl: 'https://github.com/',
-        mediaType: 1,
-        showAdAttribution: true,
-        renderLargerThumbnail: true
-}
+      mentionedJid: [m.sender]
 }
 }, { quoted: m});
 };
 
-handler.command = ['menu', 'help', 'ayuda'];
+handler.help = ['menu'];
 handler.tags = ['main'];
-handler.help = ['menu', 'help'];
+handler.command = ['menu'];
 handler.register = false;
 
 export default handler;
+
+function clockString(ms) {
+  let h = Math.floor(ms / 3600000);
+  let m = Math.floor(ms / 60000) % 60;
+  let s = Math.floor(ms / 1000) % 60;
+  return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':');
+}
