@@ -26,6 +26,6 @@ export async function before(m) {
     user.commands = (user.commands || 0) + 1;
 } else {
     const comando = m.text.trim().split(' ')[0];
-    await m.reply(`˚｡ El comando *${comando}* no existe.\nPara ver la lista de comandos usa:\n» *${usedPrefix}help*\n\n𝖢𝗋𝖾𝖺𝖽𝗈 𝗉𝗈𝗋 “𝖿𝖾𝖽𝖾𝗑𝗒𝗓”`);
+    await m.reply(`˚🌑｡ El comando *${comando}* no existe.\nPara ver la lista de comandos usa:\n» *${usedPrefix}help*\n\n*𝖢𝗋𝖾𝖺𝖽𝗈 𝗉𝗈𝗋 𝖿𝖾𝖽𝖾𝗑𝗒𝗓*`);
 }
 }
