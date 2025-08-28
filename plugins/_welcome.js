@@ -47,20 +47,18 @@ export async function before(m, { conn, participants, groupMetadata}) {
 ) {
     const defaultWelcome = `
 ╭───────────────╮
-│  👋 ¡𝖧𝗈𝗅𝖺 ${mention}! │
+│  👋 ¡𝖧𝗈𝗅𝖺 ${mention}!   │
 ╰───────────────╯
 𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽𝗈 𝖺 *${groupMetadata.subject}* ˚🌑｡
 
 𝖲𝗈𝗒 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣*, 𝗍𝗎 𝖼𝗈𝗆𝗉𝖺𝗇𝖾𝗋𝗈 𝗏𝗂𝗋𝗍𝗎𝖺𝗅 𝖾𝗇 𝖾𝗌𝗍𝖺 𝖼𝗈𝗆𝗎𝗇𝗂𝖽𝖺𝖽.
 
-𝖤𝗌𝗉𝖾𝗋𝗈 𝗊𝗎𝖾 𝗉𝗈𝖽𝖺𝗆𝗈𝗌 𝖼𝗈𝗆𝗉𝖺𝗋𝗍𝗂𝗋 𝖻𝗎𝖾𝗇𝗈𝗌 𝗆𝗈𝗆𝖾𝗇𝗍𝗈𝗌 𝗒 𝖼𝗈𝗇𝗌𝗍𝗋𝗎𝗂𝗋 𝗎𝗇𝖺 𝖺𝗆𝗂𝗌𝗍𝖺𝖽 𝖽𝗎𝗋𝖺𝖽𝖾𝗋𝖺.
 
 📌 𝖭𝗈 𝗈𝗅𝗏𝗂𝖽𝖾𝗇 𝗊𝗎𝖾 𝖾𝗅 𝖻𝗈𝗍 𝖺𝗎𝗇 𝖾𝗌𝗍𝖺́ 𝖾𝗇 𝖽𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝗈. 𝖯𝗈𝗋 𝖿𝖺𝗏𝗈𝗋, 𝗇𝗈 𝖾𝗌𝖼𝗋𝗂𝖻𝖺𝗇 𝖺𝗅 𝗉𝗋𝗂𝗏𝖺𝖽𝗈.
 
 🔗 𝖦𝖱𝖴𝖯𝖮 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://chat.whatsapp.com/L7KaSk27pBX7LMZKaaT8HE
 📣 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
 
-> 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣
 `;
 
     const welcomeText = (chat.welcomeText || defaultWelcome)
@@ -75,16 +73,16 @@ export async function before(m, { conn, participants, groupMetadata}) {
       image: imgBuffer,
       caption: welcomeText,
       mentions: [userJid],
-      footer: '✨ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣',
+      footer: '˚🌑｡ 𝖣𝖾𝗏𝖥𝖾𝖽𝖾𝟣𝟥 | 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣',
       buttons: [
-        { buttonId: '.menu', buttonText: { displayText: '📜 Menú'}, type: 1},
-        { buttonId: '.reg user.17', buttonText: { displayText: '📝 Registrarse'}, type: 1}
+        { buttonId: '.menu', buttonText: { displayText: '˚📚｡ 𝖬𝖤𝖭𝖴'}, type: 1},
+        { buttonId: '.reg SIN-NOMBRE 👻.17', buttonText: { displayText: '˚🌑｡ 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱'}, type: 1}
       ],
       headerType: 4
 });
 }
 
-  // 👋 𝖣𝖾𝗌𝗉𝖾𝖽𝗂𝖽𝖺
+  // 👋 Despedida 
   else if (
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE ||
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
