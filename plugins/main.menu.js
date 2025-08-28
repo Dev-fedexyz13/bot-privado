@@ -44,6 +44,8 @@ ${taguser}, ${saludo}
 ╰──────────────╯
 
 ╭──「 DESCARGAS 」──╮
+˚🌑｡ ${usedPrefix}facebook
+˚🌑｡ ${usedPrefix}fb
 ˚🌑｡ ${usedPrefix}instagram
 ˚🌑｡ ${usedPrefix}ig
 ˚🌑｡ ${usedPrefix}modapk
