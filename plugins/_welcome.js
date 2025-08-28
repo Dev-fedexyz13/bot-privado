@@ -57,7 +57,7 @@ export async function before(m, { conn, participants, groupMetadata}) {
 📌 𝖭𝗈 𝗈𝗅𝗏𝗂𝖽𝖾𝗇 𝗊𝗎𝖾 𝖾𝗅 𝖻𝗈𝗍 𝖺𝗎𝗇 𝖾𝗌𝗍𝖺́ 𝖾𝗇 𝖽𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝗈. 𝖯𝗈𝗋 𝖿𝖺𝗏𝗈𝗋, 𝗇𝗈 𝖾𝗌𝖼𝗋𝗂𝖻𝖺𝗇 𝖺𝗅 𝗉𝗋𝗂𝗏𝖺𝖽𝗈.
 
 🔗 𝖦𝖱𝖴𝖯𝖮 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://chat.whatsapp.com/L7KaSk27pBX7LMZKaaT8HE
-📣 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
+📣 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbB0TV196H4QK21HLe29
 
 `;
 
