@@ -55,7 +55,8 @@ ${taguser}, ${saludo}
 ╭──「 BUSCADOR 」──╮
 ˚🌑｡ ${usedPrefix}imagen
 ˚🌑｡ ${usedPrefix}img
-˚🌑｡
+˚🌑｡ ${usedPrefix}tiktok
+˚🌑｡ ${usedPrefix}tt
 ╰──────────────╯
 
 ╭───「 FUN 」───╮
