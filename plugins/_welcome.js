@@ -31,7 +31,7 @@ export async function before(m, { conn, participants, groupMetadata}) {
   async function fetchImage(url) {
     try {
       const res = await fetch(url);
-      if (!res.ok) throw new Error('𝖤𝗋𝗋𝗈𝗋 𝖺𝗅 𝗀𝖾𝗇𝖾𝗋𝖺𝗋 𝗂𝗆𝖺𝗀𝖾𝗇 𝖽𝖾 𝖻𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽𝖺');
+      if (!res.ok) throw new Error('𝖤𝗋𝗋𝗈𝗋 𝖺𝗅 𝗀𝖾𝗇𝖾𝗋𝖺𝗋 𝗂𝗆𝖺𝗀𝖾𝗇 𝖽𝖾 𝖻𝗂𝖾𝗇𝖾𝗇𝗂𝖽𝖺');
       return await res.buffer();
 } catch (e) {
       console.error('[𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣] 𝖤𝗋𝗋𝗈𝗋 𝖾𝗇 𝗅𝖺 𝖠𝖯𝖨 𝖽𝖾 𝗂𝗆𝖺𝗀𝖾𝗇:', e);
@@ -55,7 +55,7 @@ export async function before(m, { conn, participants, groupMetadata}) {
 
 𝖤𝗌𝗉𝖾𝗋𝗈 𝗊𝗎𝖾 𝗉𝗈𝖽𝖺𝗆𝗈𝗌 𝖼𝗈𝗆𝗉𝖺𝗋𝗍𝗂𝗋 𝖻𝗎𝖾𝗇𝗈𝗌 𝗆𝗈𝗆𝖾𝗇𝗍𝗈𝗌 𝗒 𝖼𝗈𝗇𝗌𝗍𝗋𝗎𝗂𝗋 𝗎𝗇𝖺 𝖺𝗆𝗂𝗌𝗍𝖺𝖽 𝖽𝗎𝗋𝖺𝖽𝖾𝗋𝖺.
 
-📌 𝖭𝗈 𝗈𝗅𝗏𝗂𝖽𝖾𝗌 𝗋𝖾𝗏𝗂𝗌𝖺𝗋 𝗅𝖺𝗌 𝗋𝖾𝗀𝗅𝖺𝗌 𝗉𝖺𝗋𝖺 𝗎𝗇𝖺 𝖼𝗈𝗇𝗏𝗂𝗏𝖾𝗇𝖼𝗂𝖺 𝗌𝖺𝗇𝖺.
+📌 𝖭𝗈 𝗈𝗅𝗏𝗂𝖽𝖾𝗇 𝗊𝗎𝖾 𝖾𝗅 𝖻𝗈𝗍 𝖺𝗎𝗇 𝖾𝗌𝗍𝖺́ 𝖾𝗇 𝖽𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝗈. 𝖯𝗈𝗋 𝖿𝖺𝗏𝗈𝗋, 𝗇𝗈 𝖾𝗌𝖼𝗋𝗂𝖻𝖺𝗇 𝖺𝗅 𝗉𝗋𝗂𝗏𝖺𝖽𝗈.
 
 🔗 𝖦𝖱𝖴𝖯𝖮 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://chat.whatsapp.com/L7KaSk27pBX7LMZKaaT8HE
 📣 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
@@ -74,7 +74,13 @@ export async function before(m, { conn, participants, groupMetadata}) {
     await conn.sendMessage(m.chat, {
       image: imgBuffer,
       caption: welcomeText,
-      mentions: [userJid]
+      mentions: [userJid],
+      footer: '✨ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣',
+      buttons: [
+        { buttonId: '.menu', buttonText: { displayText: '📜 Menú'}, type: 1},
+        { buttonId: '.reg user.17', buttonText: { displayText: '📝 Registrarse'}, type: 1}
+      ],
+      headerType: 4
 });
 }
 
