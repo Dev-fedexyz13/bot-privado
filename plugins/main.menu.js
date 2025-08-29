@@ -99,12 +99,21 @@ ${taguser}, ${saludo}
 
     await conn.sendMessage(m.chat, {
   video: { url: video},
-  caption: `${menu}\n\n𖣣ֶㅤ֯⌗ 🌑 ׄ *Contacto directo con el creador:*\nhttps://wa.me/549115678758`,
+  caption: menu,
   buttons: [
     {
-      buttonId: `${usedPrefix}reg SINNOMBRE.17`,
-      buttonText: { displayText: '🌑 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱'},
-      type: 1
+      index: 0,
+      urlButton: {
+        displayText: '🌑 𝖢𝖮𝖭𝖳𝖠𝖢𝖳𝖠𝖱 𝖢𝖱𝖤𝖠𝖣𝖮𝖱',
+        url: 'https://wa.me/549115678758'
+}
+},
+    {
+      index: 1,
+      quickReplyButton: {
+        displayText: '🌑 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱',
+        id: `${usedPrefix}reg SINNOMBRE.17`
+}
 }
   ],
   contextInfo: {
@@ -152,4 +161,4 @@ function clockString(ms) {
   let m = isNaN(ms)? '--': Math.floor(ms / 60000) % 60;
   let s = isNaN(ms)? '--': Math.floor(ms / 1000) % 60;
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':');
-}
+      }
