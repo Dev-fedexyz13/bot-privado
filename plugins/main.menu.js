@@ -33,6 +33,7 @@ ${taguser}, ${saludo}
 
 ╭──「 𝖨𝖭𝖥𝖮 」──╮
 ˚🌑｡ ${usedPrefix}menu
+˚🌑｡ ${usedPrefix}help
 ˚🌑｡ ${usedPrefix}unreg
 ˚🌑｡ ${usedPrefix}reg
 ╰──────────────╯
