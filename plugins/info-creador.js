@@ -15,8 +15,8 @@ let handler = async (m, { conn}) => {
 
   const owners = [
     {
-      name: 'DevBrayan',
-      desc: `${deco} Creador Principal de 𝖭𝖺𝗀𝗂𝖡𝗈𝗍V3`,
+      name: '𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓',
+      desc: `${deco} Creador Principal de  𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣`,
       image: 'https://files.cloudkuimages.guru/images/3fPcipOs.jpg',
       buttons: [
         { name: 'WhatsApp', url: 'https://wa.me/549115678758'},
