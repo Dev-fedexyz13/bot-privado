@@ -90,32 +90,30 @@ let handler = async (m, { conn, command, usedPrefix}) => {
 𖣣ֶㅤ֯⌗ 🌑 ׄ *𝖢𝖮𝖭𝖤𝖢𝖳𝖠𝖣𝖮𝖲:* ${total}
 𖣣ֶㅤ֯⌗ 🌑 ׄ *𝖡𝖮𝖳:* ${botname}
 
-${list || `${deco} ✧ 𝖭𝗈 𝗁𝖺𝗒 𝖲𝗎𝖻-𝖡𝗈𝗍𝗌 𝖽𝗂𝗌𝗉𝗈𝗇𝗂𝖻𝗅𝖾𝗌 𝖾𝗇 𝖾𝗌𝗍𝖾 𝗆𝗈𝗆𝖾𝗇𝗍𝗈.`}`.trim()      const response = `
-🍁 LISTA DE *SUB-BOTS* ACTIVOS
+${list || `${deco} ✧ 𝖭𝗈 𝗁𝖺𝗒 𝖲𝗎𝖻-𝖡𝗈𝗍𝗌 𝖽𝗂𝗌𝗉𝗈𝗇𝗂𝖻𝗅𝖾𝗌 𝖾𝗇 𝖾𝗌𝗍𝖾 𝗆𝗈𝗆𝖾𝗇𝗍𝗈.`}`.trim()
 
-🍁 Puedes solicitar acceso para que el bot se una a tu grupo.
-
-⚠️ Cada Sub-Bot opera de forma independiente. El número principal no se responsabiliza por su uso indebido.
-
-📌 Sub-Bots conectados: ${total}
-
-${list || '🍁 No hay Sub-Bots disponibles en este momento.'}
-`.trim();
-
-      await conn.sendMessage(m.chat, {
+await conn.sendMessage(m.chat, {
         text: response,
-        mentions: conn.parseMention(response)
-}, { quoted: m});
-      break;
+        mentions: conn.parseMention(response),
+        buttons: [
+          {
+            buttonId: `${usedPrefix}code`,
+            buttonText: { displayText: '🌑 𝖢𝖮𝖣𝖤'},
+            type: 1
+}
+        ]
+}, { quoted: m})
+      break
 }
 }
-};
+}
 
-handler.tags = ['serbot'];
-handler.help = ['sockets', 'deletesesion', 'pausarai'];
-handler.command = ['deletesesion', 'deletebot', 'deletesession', 'deletesesaion',
+handler.tags = ['serbot']
+handler.help = ['deletebot', 'eliminarsession', 'delbot', 'stop', 'bots']
+handler.command = [
+  'deletebot', 'eliminarsession', 'delbot',
   'stop', 'pausarai', 'pausarbot',
   'bots', 'sockets', 'socket'
-];
+]
 
-export default handler;
+export default handler
