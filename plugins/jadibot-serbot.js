@@ -31,7 +31,7 @@ let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
 let rtx = `
-╭─〔 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠: Vinculación QR 〕─╮
+╭─〔 ˚🌑｡ VINCULACIÓN  POR QR ˚🌑｡ 〕─╮
 ✦ Escanea este código QR desde otro dispositivo para convertirte en un *Sub-Bot Temporal*.
 
 🧭 Pasos:
@@ -41,10 +41,12 @@ let rtx = `
 
 ⏳ Este código expira en **45 segundos**.
 ⚠️ No cierres la sesión hasta que se complete la vinculación.
+
+CANAL OFICIAL:
 ╰────────────────────────╯
 `;
 let rtx2 = `
-╭─〔 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠: Vinculación por Código 〕─╮
+╭─〔 ˚🌑｡ VINCULACIÓN POR CODIGO ˚🌑｡ 〕─╮
 ✦ Usa este código para conectarte como *Sub-Bot Temporal* desde otro dispositivo.
 
 🧭 Pasos:
@@ -54,6 +56,8 @@ let rtx2 = `
 \`4\` » Ingresa el código proporcionado para iniciar sesión.
 
 ⚠️ Recomendación: No uses tu cuenta principal para esta vinculación.
+
+CANAL OFICIAL
 ╰──────────────────────────────╯
 `;
 
