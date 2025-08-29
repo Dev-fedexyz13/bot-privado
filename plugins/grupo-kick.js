@@ -1,5 +1,5 @@
 const handler = async (m, { conn, participants}) => {
-  const deco = ㅤ֯⌗ 🌑 ׄ';
+  const deco = '⌗ 🌑 ׄ';
 
   if (!m.mentionedJid[0] &&!m.quoted) {
     return conn.reply(m.chat, `
