@@ -1,7 +1,7 @@
 const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command, usedPrefix}) => {
   if (usedPrefix.toLowerCase() === 'a') return;
 
-  const customEmoji = global.db.data.chats[m.chat]?.customEmoji || '🥷';
+  const customEmoji = global.db.data.chats[m.chat]?.customEmoji || '˚🌑｡';
   await m.react(customEmoji);
 
   if (!(isAdmin || isOwner)) {
