@@ -42,7 +42,8 @@ let rtx = `
 ⏳ Este código expira en **45 segundos**.
 ⚠️ No cierres la sesión hasta que se complete la vinculación.
 
-CANAL OFICIAL:
+˚🌑｡ *CANAL OFICIAL:* https://whatsapp.com/channel/0029VbB0TV196H4QK21HLe29
+
 ╰────────────────────────╯
 `;
 let rtx2 = `
@@ -57,7 +58,8 @@ let rtx2 = `
 
 ⚠️ Recomendación: No uses tu cuenta principal para esta vinculación.
 
-CANAL OFICIAL
+˚🌑｡ *CANAL OFICIAL:* https://whatsapp.com/channel/0029VbB0TV196H4QK21HLe29
+
 ╰──────────────────────────────╯
 `;
 
