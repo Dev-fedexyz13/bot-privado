@@ -71,6 +71,8 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}invocar 
 ˚🌑｡ ${usedPrefix}tagall
 ˚🌑｡ ${usedPrefix}todos
+˚🌑｡ ${usedPrefix}cerrar
+˚🌑｡ ${usedPrefix}abrir
 ╰──────────────╯
 
 ╭──「 ON / OFF 」──╮
@@ -83,6 +85,8 @@ ${taguser}, ${saludo}
 ╰──────────────╯
 
 ╭──「 SER-BOT 」──╮
+˚🌑｡ ${usedPrefix}deletebot
+˚🌑｡ ${usedPrefix}bots
 ˚🌑｡ ${usedPrefix}code
 ˚🌑｡ ${usedPrefix}qr
 ╰──────────────╯
