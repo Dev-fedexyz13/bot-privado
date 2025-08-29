@@ -49,7 +49,7 @@ let handler = async function (m, { conn, text, usedPrefix, command}) {
 
   await conn.sendMessage(m.chat, {
     text: mensaje,
-    footer: '✨ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣',
+    footer: '📩 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣',
     buttons: [
       { buttonId: '.menu', buttonText: { displayText: '˚🌑｡ 𝖬𝖤𝖭𝖴'}, type: 1}
     ],
