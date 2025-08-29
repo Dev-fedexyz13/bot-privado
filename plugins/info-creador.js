@@ -21,7 +21,6 @@ let handler = async (m, { conn}) => {
       buttons: [
         { name: 'WhatsApp', url: 'https://wa.me/549115678758'},
         { name: 'Instagram', url: 'https://www.instagram.com/Dev_fedexyz13'},
-        { name: 'Grupo', url: 'https://chat.whatsapp.com/F497xqLtNVp8MqHGUCYofA'},
         { name: 'TikTok', url: 'https://www.tiktok.com/@frases_isagi'}
       ]
 }
