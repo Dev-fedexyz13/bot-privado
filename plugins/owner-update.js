@@ -11,7 +11,7 @@ let handler = async (m, { conn}) => {
 
   exec('git pull', (err, stdout, stderr) => {
     if (err) {
-      console.error('[The-fede_IA] Error al actualizar:', err);
+      console.error('[𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣] Error al actualizar:', err);
       return conn.reply(m.chat, `${emojiError} 𝖤𝗋𝗋𝗈𝗋: No se pudo completar la actualización.\n📎 Razón: ${err.message}`, m);
 }
 
