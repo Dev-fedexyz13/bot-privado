@@ -119,29 +119,3 @@ handler.command = ['deletesesion', 'deletebot', 'deletesession', 'deletesesaion'
 ];
 
 export default handler;
-
-await conn.sendMessage(m.chat, {
-        text: response,
-        mentions: conn.parseMention(response),
-        buttons: [
-          {
-            buttonId: `${usedPrefix}code`,
-            buttonText: { displayText: '🌑 𝖢𝖮𝖣𝖤'},
-            type: 1
-}
-        ]
-}, { quoted: m})
-      break
-}
-}
-}
-
-handler.tags = ['serbot']
-handler.help = ['deletebot', 'eliminarsession', 'delbot', 'stop', 'bots']
-handler.command = [
-  'deletebot', 'eliminarsession', 'delbot',
-  'stop', 'pausarai', 'pausarbot',
-  'bots', 'sockets', 'socket'
-]
-
-export default handler
