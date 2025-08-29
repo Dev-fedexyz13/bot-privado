@@ -98,15 +98,15 @@ ${taguser}, ${saludo}
 }
       ],
       contextInfo: {
-    mentionedJid: [m.sender],
-    isForwarded: true,
-    forwardingScore: 999,
-    externalAdReply: {
-      title: '🎧 𝖮𝖻𝗂𝗍𝗈 Menu Oficial',
-      body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣˚🌑｡ ',
-      thumbnailUrl: 'https://files.cloudkuimages.guru/images/wn5uChxB.jpg',
-      mediaType: 1,
-      renderLargerThumbnail: false
+        mentionedJid: [m.sender],
+        isForwarded: true,
+        forwardingScore: 999,
+        externalAdReply: {
+          title: '🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒 🌑',
+          body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ˚🌑｡',
+          thumbnailUrl: perfil,
+          mediaType: 1,
+          renderLargerThumbnail: false
 }
 },
       gifPlayback: true,
