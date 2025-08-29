@@ -54,6 +54,7 @@ ${taguser}, ${saludo}
 ╰──────────────╯
 
 ╭──「 BUSCADOR 」──╮
+˚🌑｡ ${usedPrefix}ytmp4 | ${usedPrefix}ytvideo
 ˚🌑｡ ${usedPrefix}imagen
 ˚🌑｡ ${usedPrefix}img
 ˚🌑｡ ${usedPrefix}tiktok
