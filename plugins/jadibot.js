@@ -73,7 +73,7 @@ let handler = async (m, { conn, command, usedPrefix}) => {
         const jid = bot.user.jid.replace(/[^0-9]/g, '');
         const name = bot.user.name || 'Sub-Bot';
         const uptime = bot.uptime? formatUptime(Date.now() - bot.uptime): 'Desconocido';
-        return `• 「 ${i + 1} 」\n📎 wa.me/${jid}?text=${usedPrefix}estado\n👤 Usuario: ${name}\n🕑 Online: ${uptime}`;
+        return `• 「 ${i + 1} 」\n📎 wa.me/${jid}?text=${usedPrefix}code\n👤 Usuario: ${name}\n🕑 Online: ${uptime}`;
 }).join('\n\n──────────────────────\n\n');
 
       const total = activeBots.length;
