@@ -103,7 +103,7 @@ ${taguser}, ${saludo}
         forwardingScore: 999,
         externalAdReply: {
           title: '🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒 🌑',
-          body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ˚🌑｡',
+          body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈 𝖬𝖾𝗇𝗎 𝖮𝖿𝗂𝖼𝗂𝖺𝗅 ˚🌑｡',
           thumbnailUrl: perfil,
           mediaType: 1,
           renderLargerThumbnail: false
