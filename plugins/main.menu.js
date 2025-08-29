@@ -97,16 +97,10 @@ ${taguser}, ${saludo}
 ╰──────────────╯
 `.trim();
 
-    conn.sendMessage(m.chat, {
+    await conn.sendMessage(m.chat, {
   video: { url: video},
-  caption: menu,
+  caption: `${menu}\n\n𖣣ֶㅤ֯⌗ 🌑 ׄ *Contacto directo con el creador:*\nhttps://wa.me/549115678758`,
   buttons: [
-    {
-      buttonId: 'whatsapp_contact',
-      buttonText: { displayText: '🌑 𝖢𝖮𝖭𝖳𝖠𝖢𝖳𝖠𝖱 𝖢𝖱𝖤𝖠𝖣𝖮𝖱'},
-      type: 1,
-      url: 'https://wa.me/549115678758'
-},
     {
       buttonId: `${usedPrefix}reg SINNOMBRE.17`,
       buttonText: { displayText: '🌑 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱'},
