@@ -68,7 +68,7 @@ ${taguser}, ${saludo}
 ╭──「 GRUPOS 」──╮
 ˚🌑｡ ${usedPrefix}invocar 
 ˚🌑｡ ${usedPrefix}tagall
-˚🌑｡ ${usedPrefix}tag
+˚🌑｡ ${usedPrefix}todos
 ╰──────────────╯
 
 ╭──「 SER-BOT 」──╮
