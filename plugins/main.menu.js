@@ -97,26 +97,32 @@ ${taguser}, ${saludo}
 ╰──────────────╯
 `.trim();
 
-    await conn.sendMessage(m.chat, {
-      video: { url: video},
-      caption: menu,
-      buttons: [
-        {
-          buttonId: `${usedPrefix}reg SINNOMBRE.17`,
-          buttonText: { displayText: '🌑 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱'},
-          type: 1
+    conn.sendMessage(m.chat, {
+  video: { url: video},
+  caption: menu,
+  buttons: [
+    {
+      buttonId: 'whatsapp_contact',
+      buttonText: { displayText: '🌑 𝖢𝖮𝖭𝖳𝖠𝖢𝖳𝖠𝖱 𝖢𝖱𝖤𝖠𝖣𝖮𝖱'},
+      type: 1,
+      url: 'https://wa.me/549115678758'
+},
+    {
+      buttonId: `${usedPrefix}reg SINNOMBRE.17`,
+      buttonText: { displayText: '🌑 𝖵𝖤𝖱𝖨𝖥𝖨𝖢𝖠𝖱'},
+      type: 1
 }
-      ],
-      contextInfo: {
-        mentionedJid: [m.sender],
-        isForwarded: true,
-        forwardingScore: 999,
-        externalAdReply: {
-          title: '🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒',
-          body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈 𝖬𝖾𝗇𝗎 𝖮𝖿𝗂𝖼𝗂𝖺𝗅 ˚🌑｡',
-          thumbnailUrl: perfil,
-          mediaType: 1,
-          renderLargerThumbnail: false
+  ],
+  contextInfo: {
+    mentionedJid: [m.sender],
+    isForwarded: true,
+    forwardingScore: 999,
+    externalAdReply: {
+      title: '🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒',
+      body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈 𝖬𝖾𝗇𝗎 𝖮𝖿𝗂𝖼𝗂𝖺𝗅 ˚🌑｡',
+      thumbnailUrl: perfil,
+      mediaType: 1,
+      renderLargerThumbnail: false
 }
 },
       gifPlayback: true,
