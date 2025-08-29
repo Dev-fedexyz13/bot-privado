@@ -7,7 +7,7 @@ let handler = async (m, { conn}) => {
   const emojiError = '❌';
   const userName = m.pushName || 'usuario';
 
-  await m.reply(`${emojiStart} 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 está verificando actualizaciones...`);
+  await m.reply(`${emojiStart} 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 está verificando actualizaciones...`);
 
   exec('git pull', (err, stdout, stderr) => {
     if (err) {
@@ -16,7 +16,7 @@ let handler = async (m, { conn}) => {
 }
 
     if (stderr) {
-      console.warn('[The-fede_IA] Advertencia durante la actualización:', stderr);
+      console.warn('[𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣] Advertencia durante la actualización:', stderr);
 }
 
     if (stdout.includes('Already up to date.')) {
