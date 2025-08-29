@@ -71,6 +71,15 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}todos
 ╰──────────────╯
 
+╭──「 ON / OFF 」──╮
+˚🌑｡ ${usedPrefix}antiprivado
+˚🌑｡ ${usedPrefix}restringir
+˚🌑｡ ${usedPrefix}modoadmin
+˚🌑｡ ${usedPrefix}antilink
+˚🌑｡ ${usedPrefix}antispam
+˚🌑｡ ${usedPrefix}reaccion
+╰──────────────╯
+
 ╭──「 SER-BOT 」──╮
 ˚🌑｡ ${usedPrefix}code
 ˚🌑｡ ${usedPrefix}qr
