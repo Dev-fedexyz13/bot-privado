@@ -34,6 +34,9 @@ ${taguser}, ${saludo}
 ╭──「 𝖨𝖭𝖥𝖮 」──╮
 ˚🌑｡ ${usedPrefix}menu
 ˚🌑｡ ${usedPrefix}help
+˚🌑｡ ${usedPrefix}creador
+˚🌑｡ ${usedPrefix}dueño
+˚🌑｡ ${usedPrefix}owner
 ˚🌑｡ ${usedPrefix}unreg
 ˚🌑｡ ${usedPrefix}reg
 ╰──────────────╯
