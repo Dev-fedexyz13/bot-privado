@@ -44,12 +44,13 @@ ${taguser}, ${saludo}
 ╰──────────────╯
 
 ╭──「 DESCARGAS 」──╮
-˚🌑｡ ${usedPrefix}facebook
-˚🌑｡ ${usedPrefix}fb
-˚🌑｡ ${usedPrefix}instagram
-˚🌑｡ ${usedPrefix}ig
-˚🌑｡ ${usedPrefix}modapk
+˚🌑｡ ${usedPrefix}facebook | ˚🌑｡ ${usedPrefix}fb
+˚🌑｡ ${usedPrefix}instagram | ˚🌑｡ ${usedPrefix}ig
+˚🌑｡ ${usedPrefix}modapk 
 ˚🌑｡ ${usedPrefix}apk
+˚🌑｡ ${usedPrefix}playaudio 
+˚🌑｡ ${usedPrefix}ytmp3
+˚🌑｡ ${usedPrefix}play
 ╰──────────────╯
 
 ╭──「 BUSCADOR 」──╮
