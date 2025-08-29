@@ -22,7 +22,7 @@ let handler = async (m, { conn}) => {
         { name: 'WhatsApp', url: 'https://wa.me/549115678758'},
         { name: 'Instagram', url: 'https://www.instagram.com/Dev_fedexyz13'},
         { name: 'Grupo', url: 'https://chat.whatsapp.com/F497xqLtNVp8MqHGUCYofA'},
-        { name: 'TikTok', url: 'https://www.tiktok.com/@Frases_isagi'}
+        { name: 'TikTok', url: 'https://www.tiktok.com/@frases_isagi'}
       ]
 }
   ]
@@ -42,7 +42,7 @@ let handler = async (m, { conn}) => {
 
     cards.push({
       body: proto.Message.InteractiveMessage.Body.fromObject({
-        text: `✨️ ${deco} *${owner.name}*\n${owner.desc}`
+        text: `${deco} *${owner.name}*\n${owner.desc}`
 }),
       footer: proto.Message.InteractiveMessage.Footer.fromObject({
         text: `${deco} Conecta con el creador de 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣. Explora sus redes, apóyalo y descubre el origen del código que da vida a las sombras.`
