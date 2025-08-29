@@ -74,6 +74,8 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}todos
 ˚🌑｡ ${usedPrefix}cerrar
 ˚🌑｡ ${usedPrefix}abrir
+˚🌑｡ ${usedPrefix}kick
+˚🌑｡ ${usedPrefix}ban
 ╰──────────────╯
 
 ╭──「 ON / OFF 」──╮
