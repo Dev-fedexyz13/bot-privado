@@ -39,7 +39,7 @@ let handler = async (m, { conn, command, usedPrefix}) => {
 }
 
       await conn.sendMessage(m.chat, {
-        text: `${deco} ✧ 𝖳𝗎 𝗌𝖾𝗌𝗂𝗈𝗇 𝖼𝗈𝗆𝗈 *Sub-Bot* 𝗁𝖺 𝗌𝗂𝖽𝗈 𝖾𝗅𝗂𝗆𝗂𝗇𝖺𝖽𝖺.`,
+        text: `${deco} ✧ 𝖳𝗎 𝗌𝖾𝗌𝗂𝗈𝗇 𝖼𝗈𝗆𝗈 *Sub-Bot* 𝗁𝖺 𝗌𝗂𝖽𝗈 𝖾𝗅𝗂𝗆𝗂𝗇𝖺𝖽𝗈.`,
 }, { quoted: m})
 
       try {
@@ -92,8 +92,9 @@ let handler = async (m, { conn, command, usedPrefix}) => {
 
 ${list || `${deco} ✧ 𝖭𝗈 𝗁𝖺𝗒 𝖲𝗎𝖻-𝖡𝗈𝗍𝗌 𝖽𝗂𝗌𝗉𝗈𝗇𝗂𝖻𝗅𝖾𝗌 𝖾𝗇 𝖾𝗌𝗍𝖾 𝗆𝗈𝗆𝖾𝗇𝗍𝗈.`}`.trim()
 
-await conn.sendMessage(m.chat, {
-        text: response,
+      await conn.sendMessage(m.chat, {
+        image: { url: 'https://files.cloudkuimages.guru/images/CB6cHqTy.jpg'},
+        caption: response,
         mentions: conn.parseMention(response),
         buttons: [
           {
