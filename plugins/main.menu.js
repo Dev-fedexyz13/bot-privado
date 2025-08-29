@@ -7,6 +7,10 @@ let handler = async (m, { conn, text, command, usedPrefix}) => {
   try {
     await m.react('🌑');
 
+    const deco = '𖣣ֶㅤ֯⌗ 🌑 ׄ';
+    const loading = `${deco} ENVIANDO MENÚ DE OBITO-BOT_MD...`;
+    await conn.sendMessage(m.chat, { text: loading}, { quoted: m});
+
     const who = m.mentionedJid?.[0] || (m.fromMe? conn.user.jid: m.sender);
     const perfil = await conn.profilePictureUrl(who, 'image').catch(() => 'https://qu.ax/QGAVS.jpg');
     const fecha = moment().tz('America/Lima').format('DD/MM/YYYY');
@@ -14,7 +18,7 @@ let handler = async (m, { conn, text, command, usedPrefix}) => {
     const saludo = ucapan();
     const taguser = '@' + m.sender.split('@')[0];
     const video = ['https://files.cloudkuimages.guru/videos/9yNRmc4K.mp4'].getRandom();
-
+    
     const menu = `
 ˚🌑｡ *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍-𝖬𝖣* te saluda...
 ${taguser}, ${saludo}
