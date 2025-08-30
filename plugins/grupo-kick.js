@@ -6,7 +6,7 @@ const handler = async (m, { conn, participants}) => {
 ╭─❖「 ${deco} 𝖤𝗑𝗉𝗎𝗅𝗌𝗂𝗈́𝗇 𝖥𝖺𝗅𝗅𝗂𝖽𝖺 」❖─╮
 │ ${deco} Debes *mencionar* o *responder* a un usuario.
 │ ${deco} El vacío no puede ser expulsado.
-╰────────────────────────────❖`, m);
+╰───────────────────────────❖`, m);
 }
 
   const user = m.mentionedJid[0] || m.quoted.sender;
@@ -19,7 +19,7 @@ const handler = async (m, { conn, participants}) => {
 ╭─❖「 ${deco} 𝖤𝗋𝗋𝗈𝗋 」❖─╮
 │ ${deco} No puedo expulsarme a mí mismo.
 │ ${deco} La sombra no se destruye a sí misma.
-╰────────────────────────────❖`, m);
+╰───────────────────────────❖`, m);
 }
 
   if (user === ownerGroup) {
@@ -27,7 +27,7 @@ const handler = async (m, { conn, participants}) => {
 ╭─❖「 ${deco} 𝖤𝗋𝗋𝗈𝗋 」❖─╮
 │ ${deco} El líder del grupo es intocable.
 │ ${deco} Su poder está por encima del juicio.
-╰────────────────────────────❖`, m);
+╰───────────────────────────❖`, m);
 }
 
   if (user === ownerBot) {
@@ -35,7 +35,7 @@ const handler = async (m, { conn, participants}) => {
 ╭─❖「 ${deco} 𝖤𝗋𝗋𝗈𝗋 」❖─╮
 │ ${deco} Es mi creador... no puedo tocarlo.
 │ ${deco} La oscuridad responde solo ante él.
-╰────────────────────────────❖`, m);
+╰───────────────────────────❖`, m);
 }
 
   await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
@@ -43,7 +43,7 @@ const handler = async (m, { conn, participants}) => {
 ╭─❖「 ${deco} 𝖤𝗑𝗉𝗎𝗅𝗌𝗂𝗈́𝗇 𝖤𝗃𝖾𝖼𝗎𝗍𝖺𝖽𝖺 」❖─╮
 │ ${deco} El miembro ha sido *desterrado* del reino.
 │ ${deco} 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ha ejecutado el juicio.
-╰────────────────────────────❖`, m);
+╰───────────────────────────❖`, m);
 };
 
 handler.help = ['kick'];
