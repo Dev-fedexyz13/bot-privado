@@ -45,8 +45,8 @@ let rtx = `
 
 📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
 
-╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
-`.trim();
+╰─ Obito-Bot_MD te acompaña en esta conexión ─╯`;
+
 let rtx2 = `
 ╭─〔 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖢𝖮𝖭𝖤𝖷𝖨𝖮𝖭 𝖲𝖴𝖡‐𝖡𝖮𝖳 〔𝖢𝖮𝖣𝖨𝖦𝖮〕 〕─╮
 
@@ -64,8 +64,7 @@ let rtx2 = `
 
 📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
 
-╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
-`.trim();
+╰─ Obito-Bot_MD te acompaña en esta conexión ─╯`;
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
