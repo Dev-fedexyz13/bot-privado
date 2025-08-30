@@ -31,41 +31,37 @@ let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
 let rtx = `
-╭─〔 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖢𝖮𝖭𝖤𝖷𝖨𝖮𝖭 𝖲𝖴𝖡‐𝖡𝖮𝖳 〔QR〕 〕─╮
+let rtx = `
+╭─〔 ⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖬𝖮𝖣𝖮 𝖰𝖱 〕─╮
 
-✦ Escanea este código QR desde otro dispositivo (PC o celular) para convertirte en un *𝖲𝖴𝖡‐𝖡𝖮𝖳 𝖳𝖤𝖬𝖯𝖮𝖱𝖠𝖫*.
+✦ Escanea este código QR desde otro dispositivo (PC o móvil) para convertirte en un *𝖲𝖴𝖡‐𝖡𝖮𝖳 𝖳𝖤𝖬𝖯𝖮𝖱𝖠𝖫*.
 
-┌─➤ `1` 𝖢𝗅𝗂𝖼𝗄 𝖾𝗇 𝗅𝗈𝗌 𝗍𝗋𝖾𝗌 𝗉𝗎𝗇𝗍𝗈𝗌 (arriba a la derecha)
-│
-├─➤ `2` 𝖲𝖾𝗅𝖾𝖼𝗍𝗂𝗈𝗇𝗇𝖾 "𝖣𝗂𝗌𝗉𝗈𝗌𝗂𝗍𝗂𝗏𝗈𝗌 𝗏𝗂𝗇𝖼𝗎𝗅𝖺𝖽𝗈𝗌"
-│
-└─➤ `3` 𝖤𝗌𝖼𝖺𝗇𝖾𝖺 𝖾𝗅 𝖼𝗈𝗱𝗂𝗀𝗈 𝖰𝖱 𝗉𝖺𝗋𝖺 𝗂𝗇𝗂𝖼𝗂𝖺𝗋 𝗌𝖾𝗌𝗂𝗈𝗇
+┌─➤ \`1\` Toca los tres puntos (arriba a la derecha)
+├─➤ \`2\` Selecciona "Dispositivos vinculados"
+└─➤ \`3\` Escanea el código QR para iniciar sesión
 
-✧ 𝖤𝗌𝗍𝖾 𝖼𝗈𝗱𝗂𝗀𝗈 𝖾𝗑𝗉𝗂𝗋𝖺 𝖾𝗇 *45 segundos*.
+✧ ⏳ Este código QR expira en *45 segundos*
 
 📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
 
-╰─ Obito-Bot_MD te acompaña en esta conexión ─╯`;
-
+╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
+`
 let rtx2 = `
-╭─〔 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖢𝖮𝖭𝖤𝖷𝖨𝖮𝖭 𝖲𝖴𝖡‐𝖡𝖮𝖳 〔𝖢𝖮𝖣𝖨𝖦𝖮〕 〕─╮
+╭─〔 ⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖬𝖮𝖣𝖮 𝖢𝖮𝖣𝖨𝖦𝖮 〕─╮
 
 ✦ Usa este código para convertirte en un *𝖲𝖴𝖡‐𝖡𝖮𝖳 𝖳𝖤𝖬𝖯𝖮𝖱𝖠𝖫* desde otro dispositivo.
 
-┌─➤ `1` 𝖢𝗅𝗂𝖼𝗄 𝖾𝗇 𝗅𝗈𝗌 𝗍𝗋𝖾𝗌 𝗉𝗎𝗇𝗍𝗈𝗌 (arriba a la derecha)
-│
-├─➤ `2` 𝖲𝖾𝗅𝖾𝖼𝗍𝗂𝗈𝗇𝗇𝖾 "𝖣𝗂𝗌𝗉𝗈𝗌𝗂𝗍𝗂𝗏𝗈𝗌 𝗏𝗂𝗇𝖼𝗎𝗅𝖺𝖽𝗈𝗌"
-│
-├─➤ `3` 𝖤𝗅𝗂𝗀𝖾 "𝖵𝗂𝗇𝖼𝗎𝗅𝖺𝗋 𝖼𝗈𝗇 𝗇𝗎𝗆𝖾𝗋𝗈 𝖽𝖾 𝗍𝖾𝗅𝖾𝖿𝗈𝗇𝗈"
-│
-└─➤ `4` 𝖨𝗇𝗀𝗋𝖾𝗌𝖺 𝖾𝗅 𝖼𝗈𝗱𝗂𝗀𝗈 𝗉𝖺𝗋𝖺 𝗂𝗇𝗂𝖼𝗂𝖺𝗋 𝗌𝖾𝗌𝗂𝗈𝗇
+┌─➤ \`1\` Toca los tres puntos (arriba a la derecha)
+├─➤ \`2\` Selecciona "Dispositivos vinculados"
+├─➤ \`3\` Elige "Vincular con número de teléfono"
+└─➤ \`4\` Ingresa el código para iniciar sesión
 
-✧ ⚠️ No se recomienda usar tu cuenta principal.
+✧ ⚠️ No se recomienda usar tu cuenta principal
 
 📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
 
-╰─ Obito-Bot_MD te acompaña en esta conexión ─╯`;
-
+╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
+`
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const yukiJBOptions = {}
