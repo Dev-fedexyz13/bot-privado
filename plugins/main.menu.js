@@ -24,7 +24,7 @@ let handler = async (m, { conn, text, command, usedPrefix}) => {
 ${taguser}, ${saludo}
 
 ╭─「 *𝖤𝖲𝖳𝖠𝖣𝖮 𝖣𝖤𝖫 𝖡𝖮𝖳* 」─╮
-│ 🕶️ *𝖡𝖮𝖳:* ${(conn.user.jid == global.conn.user.jid ? '𝖯𝖱𝖨𝖭𝖢𝖨𝖯𝖠𝖫 🅥' : '𝖲𝖴𝖡‐𝖡𝖮𝖳 🅑')}
+│ 🤖 *𝖡𝖮𝖳:* ${(conn.user.jid == global.conn.user.jid ? '𝖯𝖱𝖨𝖭𝖢𝖨𝖯𝖠𝖫 🅥' : '𝖲𝖴𝖡‐𝖡𝖮𝖳 🅑')}
 │ 🧠 *𝖵𝖤𝖱𝖲𝖨𝖮𝖭:* 1.1.1 *(Beta)*
 │ 🕰️ *𝖧𝖮𝖱𝖠:* ${hora}
 │ 📆 *𝖥𝖤𝖢𝖧𝖠:* ${fecha}
@@ -86,10 +86,9 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}todos
 ˚🌑｡ ${usedPrefix}cerrar
 ˚🌑｡ ${usedPrefix}abrir
-˚🌑｡ ${usedPrefix}kick
-˚🌑｡ ${usedPrefix}ban
-˚🌑｡ ${usedPrefix}hidetag
-˚🌑｡ ${usedPrefix}tag
+˚🌑｡ ${usedPrefix}kick | ${usedPrefix}link
+˚🌑｡ ${usedPrefix}hidetag | ${usedPrefix}tag
+˚🌑｡ ${usedPrefix}link
 ╰──────────────╯
 
 ╭──「 ON / OFF 」──╮
