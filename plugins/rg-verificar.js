@@ -68,8 +68,8 @@ let handler = async function (m, { conn, text, usedPrefix, command}) {
 }, { quoted: m});
 };
 
-handler.help = ['reg'];
+handler.help = ['reg','verificar', 'registrar'];
 handler.tags = ['rg'];
-handler.command = ['reg'];
+handler.command = ['reg','verificar', 'registrar'];
 
 export default handler;
