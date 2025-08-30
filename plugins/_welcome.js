@@ -1,7 +1,7 @@
 import { WAMessageStubType} from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
 
-export async function before(m, { conn, participants, groupMetadata}) {
+export async function before(m, { conn, groupMetadata}) {
   if (!m.isGroup ||!m.messageStubType) return true
 
   const stubParams = m.messageStubParameters || []
@@ -14,6 +14,7 @@ export async function before(m, { conn, participants, groupMetadata}) {
   const userJid = stubParams[0]
   const username = userJid.split('@')[0]
   const mention = '@' + username
+  const groupName = groupMetadata.subject
   const memberCount = groupMetadata.participants?.length || 0
 
   let avatar
@@ -23,8 +24,8 @@ export async function before(m, { conn, participants, groupMetadata}) {
     avatar = 'https://i.imgur.com/8B4QYQY.png'
 }
 
-  const guildName = encodeURIComponent(groupMetadata.subject)
-  const backgroundUrl = encodeURIComponent('https://files.catbox.moe/rjn0iq.jpg')
+  const guildName = encodeURIComponent(groupName)
+  const backgroundUrl = encodeURIComponent('https://files.cloudkuimages.guru/images/ADSXpvRm.jpg')
   const apiBase = 'https://api.siputzx.my.id/api/canvas'
 
   async function fetchImage(url) {
@@ -44,20 +45,7 @@ export async function before(m, { conn, participants, groupMetadata}) {
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD ||
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_INVITE
 ) {
-    const defaultWelcome = `
-👋 ¡Hola ${mention}!
-Bienvenido(a) a *${groupMetadata.subject}*
-
-Soy *Itachi Bot*, tu asistente virtual en este grupo.
-
-Por favor, evita escribir al privado del bot. Está en desarrollo.
-`
-
-    const welcomeText = (chat.welcomeText || defaultWelcome)
-.replace('@user', mention)
-.replace('@subject', groupMetadata.subject)
-.replace('@desc', groupMetadata.desc?.toString() || 'Sin descripción')
-
+    const welcomeText = `BIENVENIDO AL GRUPO, ${groupName}`
     const welcomeApiUrl = `${apiBase}/welcomev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${encodeURIComponent(avatar)}&background=${backgroundUrl}`
     const imgBuffer = await fetchImage(welcomeApiUrl)
 
@@ -73,17 +61,7 @@ Por favor, evita escribir al privado del bot. Está en desarrollo.
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE ||
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
 ) {
-    const defaultBye = `
-${mention} ha salido del grupo.
-
-Esperamos que regreses pronto a *${groupMetadata.subject}*.
-Ahora somos ${memberCount} miembros. ¡Te extrañaremos!
-`
-
-    const byeText = (chat.byeText || defaultBye)
-.replace('@user', mention)
-.replace('@subject', groupMetadata.subject)
-
+    const byeText = `HASTA LUEGO ${mention}`
     const goodbyeApiUrl = `${apiBase}/goodbyev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${encodeURIComponent(avatar)}&background=${backgroundUrl}`
     const imgBuffer = await fetchImage(goodbyeApiUrl)
 
