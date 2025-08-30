@@ -87,6 +87,8 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}abrir
 ˚🌑｡ ${usedPrefix}kick
 ˚🌑｡ ${usedPrefix}ban
+˚🌑｡ ${usedPrefix}hidetag
+˚🌑｡ ${usedPrefix}tag
 ╰──────────────╯
 
 ╭──「 ON / OFF 」──╮
