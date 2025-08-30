@@ -31,37 +31,41 @@ let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
 let rtx = `
-╭─〔 ˚🌑｡ VINCULACIÓN  POR QR ˚🌑｡ 〕─╮
-✦ Escanea este código QR desde otro dispositivo para convertirte en un *Sub-Bot Temporal*.
+╭─〔 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖢𝖮𝖭𝖤𝖷𝖨𝖮𝖭 𝖲𝖴𝖡‐𝖡𝖮𝖳 〔QR〕 〕─╮
 
-🧭 Pasos:
-\`1\` » Toca los tres puntos en la esquina superior derecha.
-\`2\` » Selecciona *Dispositivos vinculados*.
-\`3\` » Escanea el código QR que aparece en pantalla.
+✦ Escanea este código QR desde otro dispositivo (PC o celular) para convertirte en un *𝖲𝖴𝖡‐𝖡𝖮𝖳 𝖳𝖤𝖬𝖯𝖮𝖱𝖠𝖫*.
 
-⏳ Este código expira en **45 segundos**.
-⚠️ No cierres la sesión hasta que se complete la vinculación.
+┌─➤ `1` 𝖢𝗅𝗂𝖼𝗄 𝖾𝗇 𝗅𝗈𝗌 𝗍𝗋𝖾𝗌 𝗉𝗎𝗇𝗍𝗈𝗌 (arriba a la derecha)
+│
+├─➤ `2` 𝖲𝖾𝗅𝖾𝖼𝗍𝗂𝗈𝗇𝗇𝖾 "𝖣𝗂𝗌𝗉𝗈𝗌𝗂𝗍𝗂𝗏𝗈𝗌 𝗏𝗂𝗇𝖼𝗎𝗅𝖺𝖽𝗈𝗌"
+│
+└─➤ `3` 𝖤𝗌𝖼𝖺𝗇𝖾𝖺 𝖾𝗅 𝖼𝗈𝗱𝗂𝗀𝗈 𝖰𝖱 𝗉𝖺𝗋𝖺 𝗂𝗇𝗂𝖼𝗂𝖺𝗋 𝗌𝖾𝗌𝗂𝗈𝗇
 
-˚🌑｡ *CANAL OFICIAL:* https://whatsapp.com/channel/0029VbB0TV196H4QK21HLe29
+✧ 𝖤𝗌𝗍𝖾 𝖼𝗈𝗱𝗂𝗀𝗈 𝖾𝗑𝗉𝗂𝗋𝖺 𝖾𝗇 *45 segundos*.
 
-╰────────────────────────╯
-`;
+📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
+
+╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
+`.trim();
 let rtx2 = `
-╭─〔 ˚🌑｡ VINCULACIÓN POR CODIGO ˚🌑｡ 〕─╮
-✦ Usa este código para conectarte como *Sub-Bot Temporal* desde otro dispositivo.
+╭─〔 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖢𝖮𝖭𝖤𝖷𝖨𝖮𝖭 𝖲𝖴𝖡‐𝖡𝖮𝖳 〔𝖢𝖮𝖣𝖨𝖦𝖮〕 〕─╮
 
-🧭 Pasos:
-\`1\` » Toca los tres puntos en la esquina superior derecha.
-\`2\` » Selecciona *Dispositivos vinculados*.
-\`3\` » Elige *Vincular con número de teléfono*.
-\`4\` » Ingresa el código proporcionado para iniciar sesión.
+✦ Usa este código para convertirte en un *𝖲𝖴𝖡‐𝖡𝖮𝖳 𝖳𝖤𝖬𝖯𝖮𝖱𝖠𝖫* desde otro dispositivo.
 
-⚠️ Recomendación: No uses tu cuenta principal para esta vinculación.
+┌─➤ `1` 𝖢𝗅𝗂𝖼𝗄 𝖾𝗇 𝗅𝗈𝗌 𝗍𝗋𝖾𝗌 𝗉𝗎𝗇𝗍𝗈𝗌 (arriba a la derecha)
+│
+├─➤ `2` 𝖲𝖾𝗅𝖾𝖼𝗍𝗂𝗈𝗇𝗇𝖾 "𝖣𝗂𝗌𝗉𝗈𝗌𝗂𝗍𝗂𝗏𝗈𝗌 𝗏𝗂𝗇𝖼𝗎𝗅𝖺𝖽𝗈𝗌"
+│
+├─➤ `3` 𝖤𝗅𝗂𝗀𝖾 "𝖵𝗂𝗇𝖼𝗎𝗅𝖺𝗋 𝖼𝗈𝗇 𝗇𝗎𝗆𝖾𝗋𝗈 𝖽𝖾 𝗍𝖾𝗅𝖾𝖿𝗈𝗇𝗈"
+│
+└─➤ `4` 𝖨𝗇𝗀𝗋𝖾𝗌𝖺 𝖾𝗅 𝖼𝗈𝗱𝗂𝗀𝗈 𝗉𝖺𝗋𝖺 𝗂𝗇𝗂𝖼𝗂𝖺𝗋 𝗌𝖾𝗌𝗂𝗈𝗇
 
-˚🌑｡ *CANAL OFICIAL:* https://whatsapp.com/channel/0029VbB0TV196H4QK21HLe29
+✧ ⚠️ No se recomienda usar tu cuenta principal.
 
-╰──────────────────────────────╯
-`;
+📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
+
+╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
+`.trim();
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
