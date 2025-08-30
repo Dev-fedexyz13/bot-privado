@@ -1,43 +1,40 @@
-import { exec} from 'child_process';
+import { execSync} from 'child_process';
 
-let handler = async (m, { conn}) => {
-  const emojiStart = '🔄';
-  const emojiSuccess = '✅';
-  const emojiUpToDate = '📦';
-  const emojiError = '❌';
+let handler = async (m, { conn, args}) => {
+  try {
+    const output = execSync('git pull' + (args.length? ' ' + args.join(' '): '')).toString();
+    const now = new Date();
+    const fecha = now.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric'});
+    const hora = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit'});
 
-  const botOficialJID = '5491137612743@s.whatsapp.net';
-  const creadorJID = '5491156178758@s.whatsapp.net';
+    const branch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
+    const lastCommit = execSync('git log -1 --pretty=format:"%h - %s"').toString();
+    const emojis = ['✨', '🛠️', '🚀', '🔧', '📦', '🧩'];
+    const emoji = emojis[Math.floor(Math.random() * emojis.length)];
 
-  const esBotOficial = conn.user.jid === botOficialJID;
-  const esCreador = m.sender === creadorJID;
+    const response = output.includes('Already up to date')
+? `${emoji} *Obito-Bot_MD ya está actualizado.*`
+: `*${emoji} ACTUALIZACIÓN COMPLETADA*\n\n` +
+        `🗓️ *Fecha:* ${fecha}\n🕒 *Hora:* ${hora}\n🌿 *Rama:* ${branch}\n📝 *Último commit:*\n> ${lastCommit}\n\n` +
+        `\`\`\`\n${output}\n\`\`\``;
 
-  if (!esBotOficial &&!esCreador) {
-    return m.reply(`${emojiError} 𝖤𝗌𝗍𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈 𝖾𝗌 𝖾𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝗈 𝖽𝖾𝗅 𝖡𝗈𝗍 𝖮𝖿𝗂𝖼𝗂𝖺𝗅 𝗈 𝖽𝖾𝗅 𝖢𝗋𝖾𝖺𝖽𝗈𝗋.\n🕷️ 𝖫𝗈𝗌 𝗌𝗎𝖻𝖻𝗈𝗍𝗌 𝗇𝗈 𝗉𝗎𝖾𝖽𝖾𝗇 𝖾𝗃𝖾𝖼𝗎𝗍𝖺𝗋 𝖺𝖼𝗍𝗎𝖺𝗅𝗂𝗓𝖺𝖼𝗂𝗈𝗇.`);
+    await conn.sendMessage(m.chat, {
+      text: response,
+      image: { url: 'https://files.cloudkuimages.guru/images/wn5uChxB.jpg'}
+}, { quoted: m});
+
+} catch (error) {
+    const errorMsg = `❌ *Error al actualizar:*\n${error.message || 'Error desconocido.'}`;
+    await conn.sendMessage(m.chat, {
+      text: errorMsg,
+      image: { url: 'https://files.cloudkuimages.guru/images/wn5uChxB.jpg'}
+}, { quoted: m});
 }
-
-  await m.reply(`${emojiStart} 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 está verificando actualizaciones...`);
-
-  exec('git update-ref -d refs/remotes/origin/main', () => {
-    exec('git reset --hard', () => {
-      exec('git pull', (err, stdout) => {
-        if (err) {
-          return conn.reply(m.chat, `${emojiError} 𝖤𝗋𝗋𝗈𝗋: No se pudo completar la actualización.\n📎 Razón: ${err.message}`, m);
-}
-
-        if (stdout.includes('Already up to date.')) {
-          return conn.reply(m.chat, `${emojiUpToDate} 𝖤𝗅 𝖻𝗈𝗍 ya está completamente actualizado.`, m);
-}
-
-        conn.reply(m.chat, `${emojiSuccess} 𝖠𝖼𝗍𝗎𝖺𝗅𝗂𝗓𝖺𝖼𝗂𝗈́𝗇 completada con éxito.\n\n🧾 Detalles:\n${stdout}`, m);
-});
-});
-});
 };
 
-handler.help = ['update'];
-handler.tags = ['owner'];
-handler.command = ['update'];
-handler.rowner = true;
+handler.customPrefix = /^(fix|update|up)$/i;
+handler.command = new RegExp;
+handler.owner = true;
+handler.register = true;
 
 export default handler;
