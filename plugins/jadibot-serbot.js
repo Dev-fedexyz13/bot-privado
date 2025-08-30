@@ -32,36 +32,26 @@ let drm1 = ""
 let drm2 = ""
 let rtx = `
 let rtx = `
-╭─〔 ⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖬𝖮𝖣𝖮 𝖰𝖱 〕─╮
+let rtx =
+"⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | Modo QR\n\n" +
+"✦ Escanea este código QR desde otro dispositivo (PC o móvil) para convertirte en un *Sub-Bot Temporal*.\n\n" +
+"`1` Toca los tres puntos (arriba a la derecha)\n" +
+"`2` Selecciona \"Dispositivos vinculados\"\n" +
+"`3` Escanea el código QR para iniciar sesión\n\n" +
+"⏳ Este código QR expira en *45 segundos*\n\n" +
+"📡 Canal Oficial: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N\n\n" +
+"Obito-Bot_MD te acompaña en esta conexión."
+let rtx2 =
+"⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | Modo Código\n\n" +
+"✦ Usa este código para convertirte en un *Sub-Bot Temporal* desde otro dispositivo.\n\n" +
+"`1` Toca los tres puntos (arriba a la derecha)\n" +
+"`2` Selecciona \"Dispositivos vinculados\"\n" +
+"`3` Elige \"Vincular con número de teléfono\"\n" +
+"`4` Ingresa el código para iniciar sesión\n\n" +
+"⚠️ No se recomienda usar tu cuenta principal\n\n" +
+"📡 Canal Oficial: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N\n\n" +
+"Obito-Bot_MD te acompaña en esta conexión."
 
-✦ Escanea este código QR desde otro dispositivo (PC o móvil) para convertirte en un *𝖲𝖴𝖡‐𝖡𝖮𝖳 𝖳𝖤𝖬𝖯𝖮𝖱𝖠𝖫*.
-
-┌─➤ \`1\` Toca los tres puntos (arriba a la derecha)
-├─➤ \`2\` Selecciona "Dispositivos vinculados"
-└─➤ \`3\` Escanea el código QR para iniciar sesión
-
-✧ ⏳ Este código QR expira en *45 segundos*
-
-📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
-
-╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
-`
-let rtx2 = `
-╭─〔 ⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖬𝖮𝖣𝖮 𝖢𝖮𝖣𝖨𝖦𝖮 〕─╮
-
-✦ Usa este código para convertirte en un *𝖲𝖴𝖡‐𝖡𝖮𝖳 𝖳𝖤𝖬𝖯𝖮𝖱𝖠𝖫* desde otro dispositivo.
-
-┌─➤ \`1\` Toca los tres puntos (arriba a la derecha)
-├─➤ \`2\` Selecciona "Dispositivos vinculados"
-├─➤ \`3\` Elige "Vincular con número de teléfono"
-└─➤ \`4\` Ingresa el código para iniciar sesión
-
-✧ ⚠️ No se recomienda usar tu cuenta principal
-
-📡 𝖢𝖠𝖭𝖠𝖫 𝖮𝖥𝖨𝖢𝖨𝖠𝖫: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N
-
-╰─ Obito-Bot_MD te acompaña en esta conexión ─╯
-`
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const yukiJBOptions = {}
