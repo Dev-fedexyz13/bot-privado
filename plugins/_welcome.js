@@ -24,19 +24,19 @@ export async function before(m, { conn, groupMetadata}) {
     avatar = 'https://i.imgur.com/8B4QYQY.png'
 }
 
+  const background = encodeURIComponent('https://files.cloudkuimages.guru/images/ADSXpvRm.jpg')
   const guildName = encodeURIComponent(groupName)
-  const backgroundUrl = encodeURIComponent('https://files.cloudkuimages.guru/images/ADSXpvRm.jpg')
-  const apiBase = 'https://api.siputzx.my.id/api/canvas'
+  const avatarUrl = encodeURIComponent(avatar)
 
   async function fetchImage(url) {
     try {
       const res = await fetch(url)
-      if (!res.ok) throw new Error('Error al generar imagen')
+      if (!res.ok) throw new Error('No se pudo generar la imagen')
       return await res.buffer()
 } catch (e) {
-      console.error('[Itachi Bot] Error en la API de imagen:', e)
-      const fallbackRes = await fetch(avatar)
-      return await fallbackRes.buffer()
+      console.error('[Itachi Bot] Error al generar imagen:', e)
+      const fallback = await fetch(avatar)
+      return await fallback.buffer()
 }
 }
 
@@ -46,11 +46,11 @@ export async function before(m, { conn, groupMetadata}) {
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_INVITE
 ) {
     const welcomeText = `BIENVENIDO AL GRUPO, ${groupName}`
-    const welcomeApiUrl = `${apiBase}/welcomev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${encodeURIComponent(avatar)}&background=${backgroundUrl}`
-    const imgBuffer = await fetchImage(welcomeApiUrl)
+    const apiUrl = `https://api.siputzx.my.id/api/canvas/welcomev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${avatarUrl}&background=${background}`
+    const img = await fetchImage(apiUrl)
 
     await conn.sendMessage(m.chat, {
-      image: imgBuffer,
+      image: img,
       caption: welcomeText,
       mentions: [userJid]
 })
@@ -62,11 +62,11 @@ export async function before(m, { conn, groupMetadata}) {
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
 ) {
     const byeText = `HASTA LUEGO ${mention}`
-    const goodbyeApiUrl = `${apiBase}/goodbyev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${encodeURIComponent(avatar)}&background=${backgroundUrl}`
-    const imgBuffer = await fetchImage(goodbyeApiUrl)
+    const apiUrl = `https://api.siputzx.my.id/api/canvas/goodbyev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${avatarUrl}&background=${background}`
+    const img = await fetchImage(apiUrl)
 
     await conn.sendMessage(m.chat, {
-      image: imgBuffer,
+      image: img,
       caption: byeText,
       mentions: [userJid]
 })
