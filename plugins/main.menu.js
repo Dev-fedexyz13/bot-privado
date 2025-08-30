@@ -105,7 +105,6 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}catbox
 ╰──────────────╯
 
-
 ╭──「 SER-BOT 」──╮
 ˚🌑｡ ${usedPrefix}deletebot
 ˚🌑｡ ${usedPrefix}bots
