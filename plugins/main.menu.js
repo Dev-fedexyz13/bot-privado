@@ -121,8 +121,8 @@ ${taguser}, ${saludo}
     isForwarded: true,
     forwardingScore: 999,
     externalAdReply: {
-      title: '📦 Obito-Bot.zip',
-      body: 'Descarga el paquete completo del bot',
+      title: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣  ˚⚔｡',
+      body: 'Obito-Bot | Creador Dev-fedexyz13',
       thumbnailUrl: perfil,
       mediaType: 1,
       sourceUrl: 'https://yourserver.com/Obito-Bot.zip', // ← Reemplaza con tu URL real
