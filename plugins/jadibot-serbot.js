@@ -32,8 +32,7 @@ let drm1 = ""
 let drm2 = ""
 let rtx = `
 let rtx = `
-let rtx =
-"⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | Modo QR\n\n" +
+let rtx ="⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | Modo QR\n\n" +
 "✦ Escanea este código QR desde otro dispositivo (PC o móvil) para convertirte en un *Sub-Bot Temporal*.\n\n" +
 "`1` Toca los tres puntos (arriba a la derecha)\n" +
 "`2` Selecciona \"Dispositivos vinculados\"\n" +
@@ -41,8 +40,7 @@ let rtx =
 "⏳ Este código QR expira en *45 segundos*\n\n" +
 "📡 Canal Oficial: https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N\n\n" +
 "Obito-Bot_MD te acompaña en esta conexión."
-let rtx2 =
-"⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | Modo Código\n\n" +
+let rtx2 ="⚔️ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | Modo Código\n\n" +
 "✦ Usa este código para convertirte en un *Sub-Bot Temporal* desde otro dispositivo.\n\n" +
 "`1` Toca los tres puntos (arriba a la derecha)\n" +
 "`2` Selecciona \"Dispositivos vinculados\"\n" +
