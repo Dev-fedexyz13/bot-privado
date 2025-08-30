@@ -100,6 +100,12 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}reaccion
 ╰──────────────╯
 
+╭──「 CONVERTIDOR 」──╮
+˚🌑｡ ${usedPrefix}tourl2
+˚🌑｡ ${usedPrefix}catbox
+╰──────────────╯
+
+
 ╭──「 SER-BOT 」──╮
 ˚🌑｡ ${usedPrefix}deletebot
 ˚🌑｡ ${usedPrefix}bots
