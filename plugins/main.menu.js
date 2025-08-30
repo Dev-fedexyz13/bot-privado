@@ -122,7 +122,7 @@ ${taguser}, ${saludo}
     forwardingScore: 999,
     externalAdReply: {
       title: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣  ˚⚔｡',
-      body: 'Obito-Bot | Creador Dev-fedexyz13',
+      body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓',
       thumbnailUrl: perfil,
       mediaType: 1,
       sourceUrl: 'https://yourserver.com/Obito-Bot.zip', // ← Reemplaza con tu URL real
