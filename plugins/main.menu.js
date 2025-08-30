@@ -125,7 +125,7 @@ ${taguser}, ${saludo}
       body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓',
       thumbnailUrl: perfil,
       mediaType: 1,
-      sourceUrl: 'https://yourserver.com/Obito-Bot.zip', // ← Reemplaza con tu URL real
+      sourceUrl: 'https://whatsapp.com', // ← Reemplaza con tu URL real
       renderLargerThumbnail: true
 }
 },
