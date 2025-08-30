@@ -9,16 +9,16 @@ export async function before(m, { conn, isOwner, isROwner}) {
 
     // 🚫 Si el usuario ya está bloqueado, no se desbloquea automáticamente
     if (user.bloqueado) {
-      // Si el bot fue desbloqueado manualmente, lo vuelve a bloquear al primer mensaje
       await conn.updateBlockStatus(m.chat, 'block').catch(() => {});
       user.bloqueado = true;
       user.tiempoBloqueo = Date.now();
-
       return false;
 }
 
     // 🚫 Bloqueo inmediato si antiPrivado está activado
     if (!m.isGroup && bot.antiprivado &&!isOwner &&!isROwner) {
+      const usuario = m.sender.split('@')[0];
+
       await conn.sendMessage(m.chat, {
         text: `
 ╭─❖─「 🕷️ 𝖲𝖾𝗇𝗍𝖾𝗇𝖼𝗂𝖺 𝖢𝗈𝗌𝗆𝗂𝖼𝖺 🕷️ 」─❖─╮
@@ -29,9 +29,9 @@ export async function before(m, { conn, isOwner, isROwner}) {
 🕰️ Todos los canales mágicos han sido sellados.
 
 🔮 Busca redención en el gremio oficial:
-🌐 ${gp1}
+🌐 ${gremioOficial}
 ╰─◇───────────────◇─╯
-🦋 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 * te observa desde las sombras...`.trim(),
+🦋 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣* te observa desde las sombras...`.trim(),
         mentions: [m.sender]
 });
 
@@ -50,4 +50,4 @@ export async function before(m, { conn, isOwner, isROwner}) {
     console.error('[❌ ERROR EN SISTEMA ANTIPRIVADO - 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣]', e);
     return true;
 }
-    }
+}
