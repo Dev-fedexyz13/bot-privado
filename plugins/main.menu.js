@@ -42,6 +42,7 @@ ${taguser}, ${saludo}
 ╭──「 𝖨𝖭𝖥𝖮 」──╮
 ˚🌑｡ ${usedPrefix}menu
 ˚🌑｡ ${usedPrefix}help
+˚🌑｡ ${usedPrefix}ping | ${usedPrefix}p
 ˚🌑｡ ${usedPrefix}creador
 ˚🌑｡ ${usedPrefix}owner
 ˚🌑｡ ${usedPrefix}unreg
@@ -93,11 +94,9 @@ ${taguser}, ${saludo}
 
 ╭──「 ON / OFF 」──╮
 ˚🌑｡ ${usedPrefix}antiprivado
-˚🌑｡ ${usedPrefix}restringir
 ˚🌑｡ ${usedPrefix}modoadmin
 ˚🌑｡ ${usedPrefix}antilink
 ˚🌑｡ ${usedPrefix}antispam
-˚🌑｡ ${usedPrefix}reaccion
 ╰──────────────╯
 
 ╭──「 CONVERTIDOR 」──╮
