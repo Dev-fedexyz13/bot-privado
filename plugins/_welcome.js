@@ -24,9 +24,10 @@ export async function before(m, { conn, groupMetadata}) {
     avatar = 'https://i.imgur.com/8B4QYQY.png'
 }
 
-  const background = encodeURIComponent('https://files.cloudkuimages.guru/images/ADSXpvRm.jpg')
-  const guildName = encodeURIComponent(groupName)
-  const avatarUrl = encodeURIComponent(avatar)
+  const encodedAvatar = encodeURIComponent(avatar)
+  const encodedGroupName = encodeURIComponent(groupName)
+  const background = encodeURIComponent('https://files.catbox.moe/rjn0iq.jpg')
+  const guildIcon = background // usando el mismo fondo como ícono
 
   async function fetchImage(url) {
     try {
@@ -40,29 +41,13 @@ export async function before(m, { conn, groupMetadata}) {
 }
 }
 
-  // Bienvenida
+  // Solo despedida
   if (
-    m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD ||
-    m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_INVITE
-) {
-    const welcomeText = `BIENVENIDO AL GRUPO, ${groupName}`
-    const apiUrl = `https://api.siputzx.my.id/api/canvas/welcomev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${avatarUrl}&background=${background}`
-    const img = await fetchImage(apiUrl)
-
-    await conn.sendMessage(m.chat, {
-      image: img,
-      caption: welcomeText,
-      mentions: [userJid]
-})
-}
-
-  // Despedida
-  else if (
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE ||
     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
 ) {
     const byeText = `HASTA LUEGO ${mention}`
-    const apiUrl = `https://api.siputzx.my.id/api/canvas/goodbyev2?username=${username}&guildName=${guildName}&memberCount=${memberCount}&avatar=${avatarUrl}&background=${background}`
+    const apiUrl = `https://api.siputzx.my.id/api/canvas/welcomev1?username=${username}&guildName=${encodedGroupName}&guildIcon=${guildIcon}&memberCount=${memberCount}&avatar=${encodedAvatar}&background=${background}&quality=80`
     const img = await fetchImage(apiUrl)
 
     await conn.sendMessage(m.chat, {
