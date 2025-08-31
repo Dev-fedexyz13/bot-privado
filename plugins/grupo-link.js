@@ -18,7 +18,7 @@ let handler = async (m, { conn}) => {
     const message = `*乂 𝖫𝖨𝖭𝖪 - 𝖣𝖤 𝖦𝖱𝖴𝖯𝖮乂*\n\n` +
       `📍 *Nombre:* ${groupName}\n` +
       `${link}\n\n` +
-      `🧩 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | Dev-Fedexyz13*`
+      `🧩 *𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓`
 
     conn.reply(m.chat, message, m)
 } catch (e) {
