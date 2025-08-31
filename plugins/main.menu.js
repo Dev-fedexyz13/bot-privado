@@ -134,8 +134,8 @@ ${taguser}, ${saludo}
     forwardingScore: 999,
     externalAdReply: {
       title: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ˚⚔｡',
-      body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓 ˚🍁｡',
-      thumbnailUrl: 'https://files.catbox.moe/ot0xr8.jpg',
+      body: '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓',
+      thumbnailUrl: https://files.cloudkuimages.guru/images/sS8gtI57.jpg',
       mediaType: 1,
       sourceUrl: 'https://whatsapp.com',
       renderLargerThumbnail: true
