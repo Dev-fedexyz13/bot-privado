@@ -99,8 +99,9 @@ ${taguser}, ${saludo}
 ╰──────────────╯
 
 ╭──「 CONVERTIDOR 」──╮
-˚🌑｡ ${usedPrefix}tourl2
-˚🌑｡ ${usedPrefix}catbox
+˚🌑｡ ${usedPrefix}tourl2 
+˚🌑｡ ${usedPrefix}catbox 
+˚🌑｡ ${usedPrefix}tourl
 ╰──────────────╯
 
 ╭───「 OWNER 」───╮
