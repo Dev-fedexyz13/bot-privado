@@ -1,14 +1,10 @@
-import pkg from '@whiskeysockets/baileys'
-import fs from 'fs'
-import fetch from 'node-fetch'
-import axios from 'axios'
-import moment from 'moment-timezone'
-const { generateWAMessageFromContent, prepareWAMessageMedia, proto} = pkg
-
 var handler = m => m
-handler.all = async function (m) {
+handler.all = async function (m, { conn}) {
 
-  // Función para obtener buffer desde una URL
+  // Verifica si el mensaje proviene de un canal permitido
+  if (!global.canalIdM.includes(m.chat)) return
+
+  // Tu lógica continúa aquí...
   global.getBuffer = async function getBuffer(url, options) {
     try {
       options = options || {}
@@ -29,7 +25,13 @@ handler.all = async function (m) {
 }
 }
 
-  // Configuración global del bot
+  global.getRandomChannel = function () {
+    const canales = global.canalIdM || []
+    if (!canales.length) return null
+    const index = Math.floor(Math.random() * canales.length)
+    return canales[index]
+}
+
   global.creador = 'wa.me/5491156178758'
   global.ofcbot = `${conn.user.jid.split('@')[0]}`
 
@@ -49,18 +51,5 @@ handler.all = async function (m) {
     '˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 | 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖮𝖿𝗂𝖼𝗂𝖺𝗅 ˚⚔｡'
   ]
 
-  global.channelRD = await getRandomChannel()
-}
-
-export default handler
-
-function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)]
-}
-
-async function getRandomChannel() {
-  let randomIndex = Math.floor(Math.random() * global.canalIdM.length)
-  let id = global.canalIdM[randomIndex]
-  let name = global.canalNombreM[randomIndex]
-  return { id, name}
+  global.channelRD = global.getRandomChannel()
 }
