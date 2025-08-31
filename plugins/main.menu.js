@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, command, usedPrefix}) => {
     await m.react('🌑');
 
     const deco = '𖣣ֶㅤ֯⌗ 🌑 ׄ';
-    const loading = `${deco} 𝖤𝖭𝖵𝖨𝖠𝖭𝖣𝖮 𝖬𝖤𝖭𝖴́ 𝖣𝖤 𝖮𝖡𝖨𝖳𝖮-𝖡𝖮𝖳_𝖬𝖣...`,m, rcanal');
+    const loading = `${deco} 𝖤𝖭𝖵𝖨𝖠𝖭𝖣𝖮 𝖬𝖤𝖭𝖴́ 𝖣𝖤 𝖮𝖡𝖨𝖳𝖮-𝖡𝖮𝖳_𝖬𝖣...`, m, rcanal');
     await conn.sendMessage(m.chat, { text: loading}, { quoted: m});
 
     const who = m.mentionedJid?.[0] || (m.fromMe? conn.user.jid: m.sender);
