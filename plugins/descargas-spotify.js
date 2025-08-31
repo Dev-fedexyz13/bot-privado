@@ -19,7 +19,10 @@ let handler = async (m, { conn, text, usedPrefix, command}) => {
       throw "🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 » Error al analizar la respuesta JSON."
 })
 
-    if (!data.data.dl_url) throw "🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 » No se pudo obtener el enlace de descarga."
+    if (!data ||!data.data ||!data.data.dl_url) {
+      console.log('Respuesta inesperada:', data)
+      throw "🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 » No se pudo obtener el enlace de descarga. Verifica si el enlace de Spotify es válido."
+}
 
     const info = `╭─❖─「 🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 」─❖─╮
 
@@ -110,34 +113,4 @@ function timestamp(time) {
   const minutes = Math.floor(time / 60000)
   const seconds = Math.floor((time % 60000) / 1000)
   return minutes + ':' + (seconds < 10? '0': '') + seconds
-}
-
-// Obtener buffer desde URL
-async function getBuffer(url, options) {
-  try {
-    options = options || {}
-    const res = await axios({
-      method: 'get',
-      url,
-      headers: {
-        DNT: 1,
-        'Upgrade-Insecure-Request': 1
-},
-...options,
-      responseType: 'arraybuffer'
-})
-    return res.data
-} catch (err) {
-    return err
-}
-}
-
-// Acortar URL
-async function getTinyURL(text) {
-  try {
-    let response = await axios.get(`https://tinyurl.com/api-create.php?url=${text}`)
-    return response.data
-} catch (error) {
-    return text
-}
 }
