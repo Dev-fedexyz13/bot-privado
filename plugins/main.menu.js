@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, command, usedPrefix}) => {
     await m.react('🌑');
 
     const deco = '𖣣ֶㅤ֯⌗ 🌑 ׄ';
-    const loading = `${deco} 𝖤𝖭𝖵𝖨𝖠𝖭𝖣𝖮 𝖬𝖤𝖭𝖴́ 𝖣𝖤 𝖮𝖡𝖨𝖳𝖮-𝖡𝖮𝖳_𝖬𝖣...`, m, rcanal');
+    const loading = `${deco} 𝖤𝖭𝖵𝖨𝖠𝖭𝖣𝖮 𝖬𝖤𝖭𝖴́ 𝖣𝖤 𝖮𝖡𝖨𝖳𝖮-𝖡𝖮𝖳_𝖬𝖣...`;
     await conn.sendMessage(m.chat, { text: loading}, { quoted: m});
 
     const who = m.mentionedJid?.[0] || (m.fromMe? conn.user.jid: m.sender);
@@ -24,8 +24,8 @@ let handler = async (m, { conn, text, command, usedPrefix}) => {
 ${taguser}, ${saludo}
 
 ╭─〔 *𝖤𝖲𝖳𝖠𝖣𝖮 𝖣𝖤𝖫 𝖡𝖮𝖳* 〕─╮
-│ 🤖 *𝖡𝖮𝖳:* ${(con.user.jid == global.conn.user.jid ? '𝖯𝖱𝖨𝖭𝖢𝖨𝖯𝖠𝖫 🅥' : '𝖲𝖴𝖡‐𝖡𝖮𝖳 🅑')}
-│ 🧠 *𝖵𝖤𝖱𝖲𝖨𝖮𝖭:* 2.4.0*(𝖡𝖤𝖳𝖠)*
+│ 🤖 *𝖡𝖮𝖳:* ${(conn.user.jid == global.conn.user.jid ? '𝖯𝖱𝖨𝖭𝖢𝖨𝖯𝖠𝖫 🅥' : '𝖲𝖴𝖡‐𝖡𝖮𝖳 🅑')}
+│ 🧠 *𝖵𝖤𝖱𝖲𝖨𝖮𝖭:* 1.1.1 *(𝖡𝖤𝖳𝖠)*
 │ 🕰️ *𝖧𝖮𝖱𝖠:* ${hora}
 │ 📆 *𝖥𝖤𝖢𝖧𝖠:* ${fecha}
 │ 👤 *𝖢𝖱𝖤𝖠𝖣𝖮𝖱:* _𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓_
@@ -167,4 +167,4 @@ function clockString(ms) {
   let m = isNaN(ms)? '--': Math.floor(ms / 60000) % 60;
   let s = isNaN(ms)? '--': Math.floor(ms / 1000) % 60;
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':');
-      }
+}
