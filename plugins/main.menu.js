@@ -39,7 +39,7 @@ ${taguser}, ${saludo}
  乂 *𝖫𝖨𝖲𝖳𝖠 𝖣𝖤 𝖢𝖮𝖬𝖠𝖭𝖣𝖮𝖲* 乂
 
 
-𓂂𓏸  𐅹੭੭   *`MENU`*  🌑ᩚ꤬ᰨᰍ
+╭──「 𝖨𝖭𝖥𝖮 」──╮
 ˚🌑｡ ${usedPrefix}menu
 ˚🌑｡ ${usedPrefix}help
 ˚🌑｡ ${usedPrefix}ping | ${usedPrefix}p
@@ -47,15 +47,15 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}owner
 ˚🌑｡ ${usedPrefix}unreg
 ˚🌑｡ ${usedPrefix}reg
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`SEARCH`*  🌑ᩚ꤬ᰨᰍ
+╭──「 𝖲𝖤𝖠𝖱𝖢𝖧 」──╮
 ˚🌑｡ ${usedPrefix}tiktoks
 ˚🌑｡ ${usedPrefix}tiktoksearch
 ˚🌑｡ 
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`DESCARGAS`*  🌑ᩚ꤬ᰨᰍ
+╭──「 DESCARGAS 」──╮
 ˚🌑｡ ${usedPrefix}facebook | ${usedPrefix}fb
 ˚🌑｡ ${usedPrefix}instagram | ${usedPrefix}ig
 ˚🌑｡ ${usedPrefix}modapk 
@@ -63,24 +63,24 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}playaudio 
 ˚🌑｡ ${usedPrefix}ytmp3
 ˚🌑｡ ${usedPrefix}play
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`BUSCADOR`*  🌑ᩚ꤬ᰨᰍ
+╭──「 BUSCADOR 」──╮
 ˚🌑｡ ${usedPrefix}ytmp4 | ${usedPrefix}ytvideo
 ˚🌑｡ ${usedPrefix}imagen | ${usedPrefix}img
 ˚🌑｡ ${usedPrefix}pinterest | ${usedPrefix}pin
 ˚🌑｡ ${usedPrefix}tiktok
 ˚🌑｡ ${usedPrefix}tt
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`TOOLS`*  🌑ᩚ꤬ᰨᰍ
+╭───「 FUN 」───╮
 ˚🌑｡ ${usedPrefix}sticker
 ˚🌑｡ ${usedPrefix}s
 ˚🌑｡ ${usedPrefix}bratvid
 ˚🌑｡ ${usedPrefix}brat
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`GRUOPS`*  🌑ᩚ꤬ᰨᰍ
+╭──「 GRUPOS 」──╮
 ˚🌑｡ ${usedPrefix}invocar 
 ˚🌑｡ ${usedPrefix}tagall
 ˚🌑｡ ${usedPrefix}todos
@@ -89,25 +89,26 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}kick | ${usedPrefix}link
 ˚🌑｡ ${usedPrefix}hidetag | ${usedPrefix}tag
 ˚🌑｡ ${usedPrefix}link
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`NABLE`*  🌑ᩚ꤬ᰨᰍ
+╭──「 ON / OFF 」──╮
 ˚🌑｡ ${usedPrefix}antiprivado
 ˚🌑｡ ${usedPrefix}modoadmin
 ˚🌑｡ ${usedPrefix}antilink
 ˚🌑｡ ${usedPrefix}antispam
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`CONVERTIDOR`*  🌑ᩚ꤬ᰨᰍ
+╭──「 CONVERTIDOR 」──╮
 ˚🌑｡ ${usedPrefix}tourl2
 ˚🌑｡ ${usedPrefix}catbox
+╰──────────────╯
 
-
-𓂂𓏸  𐅹੭੭   *`SUBBOTS`*  🌑ᩚ꤬ᰨᰍ
+╭──「 SER-BOT 」──╮
 ˚🌑｡ ${usedPrefix}deletebot
 ˚🌑｡ ${usedPrefix}bots
 ˚🌑｡ ${usedPrefix}code
 ˚🌑｡ ${usedPrefix}qr
+╰──────────────╯
 `.trim();
 
     await conn.sendMessage(m.chat, {
