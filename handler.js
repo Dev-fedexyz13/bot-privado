@@ -553,7 +553,7 @@ group: `˚🌑｡ El comando *${comando}* solo puede ser usado en grupos.`,
 private: `˚🌑｡ El comando *${comando}* solo puede ser usado al chat privado del bot.`,
 admin: `˚🌑｡ El comando *${comando}* solo puede ser usado por los administradores del grupo.`, 
 botAdmin: `˚🌑｡ Para ejecutar el comando *${comando}* debo ser administrador del grupo.`,
-unreg: `˚🌑｡ El comando *${comando}* solo puede ser usado por los usuarios registrado, registrate usando:\n> » #${verifyaleatorio} ${user2}.${edadaleatoria}`,
+unreg: `˚🌑｡ El comando *${comando}* solo puede ser usado por los usuarios registrado, 𝖱𝖤𝖦𝖨𝖲𝖳𝖱𝖠𝖳𝖤 𝖴𝖲𝖠𝖭𝖣𝖮:\n> ୨🌑ৎ #${verifyaleatorio} ${user2}.${edadaleatoria}`,
 restrict: `˚🌑｡ Esta caracteristica está desactivada.`
 }[type];
 if (msg) return m.reply(msg).then(_ => m.react('✖️'))}
