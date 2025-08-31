@@ -103,7 +103,7 @@ ${taguser}, ${saludo}
 ˚🌑｡ ${usedPrefix}catbox
 
 
-𓂂𓏸  𐅹੭੭   *`SUB—BOTS`*  🌑ᩚ꤬ᰨᰍ
+𓂂𓏸  𐅹੭੭   *`SUBBOTS`*  🌑ᩚ꤬ᰨᰍ
 ˚🌑｡ ${usedPrefix}deletebot
 ˚🌑｡ ${usedPrefix}bots
 ˚🌑｡ ${usedPrefix}code
