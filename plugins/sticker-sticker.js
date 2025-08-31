@@ -9,8 +9,8 @@ let handler = async (m, { conn, args}) => {
   let stiker = null;
   const quoted = m.quoted || m;
   const mime = (quoted.msg || quoted).mimetype || quoted.mediaType || '';
-  const pack = global.packsticker || '🍂 𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠 🍁';
-  const author = global.author || 'SubBot';
+  const pack = global.packname || '✠ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ⚔';
+  const author = global.author || '𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓';
 
   try {
     if (/webp|image|video/.test(mime)) {
@@ -24,7 +24,7 @@ let handler = async (m, { conn, args}) => {
       try {
         stiker = await sticker(media, false, pack, author);
 } catch (e) {
-        console.warn('[The-fede_IA] Sticker directo falló, intentando alternativo...');
+        console.warn('[Obito-Bot_MD] Sticker directo falló, intentando alternativo...');
         let out;
         if (/webp/.test(mime)) out = await webp2png(media);
         else if (/image/.test(mime)) out = await uploadImage(media);
@@ -40,7 +40,7 @@ let handler = async (m, { conn, args}) => {
         return m.reply('❎ El enlace proporcionado no es válido. Asegúrate de que sea una imagen directa.');
 }
 } else {
-      return m.reply('🍁 Envía o responde a una *imagen*, *video corto* o *gif*, o proporciona un enlace válido para convertir en sticker.');
+      return m.reply('🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 » Envía o responde a una *imagen*, *video corto* o *gif*, o proporciona un enlace válido para convertir en sticker.');
 }
 
     if (stiker) {
@@ -51,7 +51,7 @@ let handler = async (m, { conn, args}) => {
 }
 
 } catch (e) {
-    console.error('[The-fede_IA] Error al crear sticker:', e);
+    console.error('[Obito-Bot_MD] Error al crear sticker:', e);
     m.reply('⚠️ Ocurrió un error inesperado al intentar generar el sticker.');
 }
 };
