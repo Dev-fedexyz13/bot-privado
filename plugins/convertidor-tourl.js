@@ -1,5 +1,5 @@
-// ✠ Código creado por Dev-Fedexyz13 | 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ⚔
-// No quites créditos, o el Mangekyō te vigila 🌑
+// ✠ Código creado por Dev-Fedexyz13 
+// No quites créditos, 
 
 import { writeFile, unlink, readFile} from 'fs/promises'
 import { join} from 'path'
@@ -41,7 +41,7 @@ let handler = async (m, { conn}) => {
         externalAdReply: {
           title: '☁️ Uploader de 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣',
           body: '🌀 Tus archivos están protegidos por el Mangekyō',
-          thumbnailUrl: 'https://files.catbox.moe/rkvuzb.jpg',
+          thumbnailUrl: 'https://files.cloudkuimages.guru/images/wn5uChxB.jpg',
           mediaType: 1,
           renderLargerThumbnail: true,
           sourceUrl: 'https://whatsapp.com/channel/0029VajUPbECxoB0cYovo60W'
