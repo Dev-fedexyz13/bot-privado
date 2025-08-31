@@ -7,10 +7,11 @@ import { webp2png} from '../lib/webp2mp4.js'
 // Firma visual del sticker
 global.packname = `✠ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ⚔`
 global.author = `
-⇝ 📆 ${moment.tz('America/Los_Angeles').format('DD/MM/YY')}
-⇝ ⏰ ${moment.tz('America/Los_Angeles').format('HH:mm:ss')}
-✦ 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓 | 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣
-♾━━━━━━━━━━━━━━━♾`
+୨ৎ 📆 ${moment.tz('America/Los_Angeles').format('DD/MM/YY')}
+୨ৎ ⏰ ${moment.tz('America/Los_Angeles').format('HH:mm:ss')}
+© 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓 | 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣
+♾━━━━━━━━━━━━━━━━━━━━♾
+♾━━━━━✦ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ✦━━━━━♾`
 
 const isUrl = (text) => /^https?:\/\/.*\.(jpe?g|gif|png|webp)$/i.test(text)
 
