@@ -7,7 +7,7 @@ const {
 
 // 🔧 Variables necesarias
 const redes = 'https://tiktok.com'; // Puedes cambiarlo por tu enlace preferido
-const dev = '𝖳𝗁𝖾-𝖿𝖾𝖽𝖾_𝖨𝖠'; // Nombre del bot o desarrollador
+const dev = '𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓 '; // Nombre del bot o desarrollador
 const avatar = 'https://i.imgur.com/JP52fdP.jpeg'; // Imagen de miniatura
 
 let handler = async (message, { conn, text}) => {
