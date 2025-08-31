@@ -1,38 +1,36 @@
 import yts from 'yt-search'
+import fs from 'fs'
 
-var handler = async (m, { text, conn, args, command, usedPrefix}) => {
+const handler = async (m, { conn, text}) => {
+  if (!text) throw '🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 » Por favor, indica qué deseas buscar en YouTube.'
 
-  if (!text) return conn.reply(m.chat, `🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 » Por favor, ingresa una búsqueda válida en YouTube.`, m)
+  const results = await yts(text)
+  const tes = results.all
 
-  conn.reply(m.chat, '🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 » Buscando resultados, espera un momento...', m)
+  const teks = tes
+.map((v) => {
+      if (v.type === 'video') {
+        return `╭─❖─「 🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 」─❖─╮
 
-  let results = await yts(text)
-  let tes = results.all
-
-  let teks = results.all.map(v => {
-    switch (v.type) {
-      case 'video': return `╭─❖─「 🌑 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 」─❖─╮
-
-𖣐 𝖡𝖴𝖲𝖰𝖴𝖤𝖣𝖠 ⬭ *${text}*
-
-> ☁️ 𝖳𝖨𝖳𝖴𝖫𝖮 » *${v.title}*
-> 🍬 𝖢𝖠𝖭𝖠𝖫 » *${v.author.name}*
-> 🕝 𝖣𝖴𝖱𝖠𝖢𝖨𝖮𝖭 » *${v.timestamp}*
-> 📆 𝖲𝖴𝖡𝖨𝖣𝖮 » *${v.ago}*
-> 👀 𝖵𝖨𝖲𝖳𝖠𝖲 » *${v.views}*
-> 🔗 𝖤𝖭𝖫𝖠𝖢𝖤 » ${v.url}
+𖣐 𝖳𝖨𝖳𝖴𝖫𝖮     ⬭ *${v.title}*
+𖣐 𝖤𝖭𝖫𝖠𝖢𝖤     ⬭ ${v.url}
+𖣐 𝖣𝖴𝖱𝖠𝖢𝖨𝖮𝖭 ⬭ *${v.timestamp}*
+𖣐 𝖲𝖴𝖡𝖨𝖣𝖮     ⬭ *${v.ago}*
+𖣐 𝖵𝖨𝖲𝖳𝖠𝖲     ⬭ *${v.views}*
 
 ╰─◇───────────────◇─╯`
 }
-}).filter(v => v).join('\n\n••••••••••••••••••••••••••••••••••••\n\n')
+})
+.filter((v) => v)
+.join('\n\n••••••••••••••••••••••••••••••••••••\n\n')
 
-  conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, fkontak, m)
+  await conn.sendMessage(m.chat, {
+    image: { url: tes[0].thumbnail},
+    caption: teks
+}, { quoted: m})
 }
 
-handler.help = ['ytsearch']
-handler.tags = ['buscador']
-handler.command = ['ytbuscar', 'ytsearch', 'yts']
-handler.register = true
-handler.coin = 1
-
+handler.help = ['ytsearch *<texto>*']
+handler.tags = ['search']
+handler.command = ['ytsearch', 'yts']
 export default handler
