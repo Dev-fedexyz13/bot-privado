@@ -1,6 +1,6 @@
 ![line](https://raw.githubusercontent.com/ArlindNocaj/animated-lines/main/rainbow-line.gif)
 
-*🚀 OBITO-BOT V4.4.4*
+*🚀 OBITO-BOT V2.4.0*
 *¡Actualización disponible!*
 ⭐ _No olvides dejar tu estrellita para apoyar el proyecto_
 
