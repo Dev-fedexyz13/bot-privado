@@ -38,7 +38,7 @@ const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 let { say } = cfonts
-console.log(chalk.magentaBright('\n𖤐 Iniciando...'))
+console.log(chalk.magentaBright('\n𖤐 Obito iniciando...'))
 say('Obito Bot', {
 font: 'simple',
 align: 'left',
