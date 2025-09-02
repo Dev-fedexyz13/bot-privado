@@ -1,25 +1,29 @@
 // código modificado por Dev-Fedexyz13
 // no quites los créditos 
 
-const { useMultiFileAuthState, DisconnectReason, makeCacheableSignalKeyStore, fetchLatestBaileysVersion, Browsers } = (await import("@whiskeysockets/baileys"));
+const { useMultiFileAuthState, DisconnectReason, makeCacheableSignalKeyStore, fetchLatestBaileysVersion, Browsers} = (await import("@whiskeysockets/baileys"));
 import qrcode from "qrcode"
 import NodeCache from "node-cache"
 import fs from "fs"
 import path from "path"
 import pino from 'pino'
 import chalk from 'chalk'
-import util from 'util' 
+import util from 'util'
 import * as ws from 'ws'
-const { child, spawn, exec } = await import('child_process')
-const { CONNECTING } = ws
-import { makeWASocket } from '../lib/simple.js'
-import { fileURLToPath } from 'url'
+const { child, spawn, exec} = await import('child_process')
+const { CONNECTING} = ws
+import { makeWASocket} from '../lib/simple.js'
+import { fileURLToPath} from 'url'
+
+const imageURL = 'https://files.catbox.moe/imagen.jpg' // URL de tu imagen personalizada
+
 let crm1 = "Y2QgcGx1Z2lucy"
 let crm2 = "A7IG1kNXN1b"
 let crm3 = "SBpbmZvLWRvbmFyLmpz"
 let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
+
 let rtx = `
 ✦˚🌑｡ 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 ˚⚔ | 𝖬𝖮𝖣𝖮: 𝖰𝖱 📸
 ━━━━━━━━━━━━━━━━━━━━━━
@@ -45,7 +49,7 @@ let rtx2 = `
 ❷ 𝖠𝖻𝗋𝖾 𝖶𝗁𝖺𝗍𝗌𝖠𝗉𝗉 𝗒 𝗏𝖾 𝖺 *𝖣𝗂𝗌𝗉𝗈𝗌𝗂𝗍𝗂𝗏𝗈𝗌 𝗏𝗂𝗇𝖼𝗎𝗅𝖺𝖽𝗈𝗌*
 ❸ 𝖳𝗈𝖼𝖺 *𝖵𝗂𝗇𝖼𝗎𝗅𝖺𝗋 𝖼𝗈𝗇 𝗇𝗎́𝗆𝖾𝗋𝗈 𝖽𝖾 𝗍𝖾𝗅𝖾́𝖿𝗈𝗇𝗈*
 ❹ 𝖯𝖾𝗀𝖺 𝖾𝗅 𝖼𝗈́𝖽𝗂𝗀𝗈 𝖾𝗇 𝖾𝗅 𝖼𝖺𝗆𝗉𝗈 𝖼𝗈𝗋𝗋𝖾𝗌𝗉𝗈𝗇𝖽𝗂𝖾𝗇𝗍𝖾
-❺ 𝖢𝗈𝗇𝖿𝗂𝗋𝗆𝖺 𝗒 𝖾𝗌𝗉𝖾𝗋𝖺 𝗅𝖺 𝖼𝗈𝗇𝖾𝗑𝗂𝗈́𝗇
+❺ 𝖢𝗈𝗇𝖿𝗂𝗋𝖒𝖺 𝗒 𝖾𝗌𝗉𝖾𝗋𝖺 𝗅𝖺 𝖼𝗈𝗇𝖾𝗑𝗂𝗈́𝗇
 
 ━━━━━━━━━━━━━━━━━━━━━━
 © 𝖣𝖾𝗏-𝖿𝖾𝖽𝖾𝗑𝗒𝗓`
