@@ -545,16 +545,16 @@ let user2 = m.pushName || 'Anónimo'
 let verifyaleatorio = ['registrar', 'reg', 'verificar'].getRandom()
 
 const msg = {
-rowner: `˚🌑｡ El comando *${comando}* solo puede ser usado por los creadores del bot.`, 
-owner: `˚🌑｡ El comando *${comando}* solo puede ser usado por los desarrolladores del bot.`, 
-mods: `˚🌑｡ El comando *${comando}* solo puede ser usado por los moderadores del bot.`, 
-premium: `˚🌑｡ El comando *${comando}* solo puede ser usado por los usuarios premium.`, 
-group: `˚🌑｡ El comando *${comando}* solo puede ser usado en grupos.`,
-private: `˚🌑｡ El comando *${comando}* solo puede ser usado al chat privado del bot.`,
-admin: `˚🌑｡ El comando *${comando}* solo puede ser usado por los administradores del grupo.`, 
-botAdmin: `˚🌑｡ Para ejecutar el comando *${comando}* debo ser administrador del grupo.`,
-unreg: `˚🌑｡ El comando *${comando}* solo puede ser usado por los usuarios registrado, 𝖱𝖤𝖦𝖨𝖲𝖳𝖱𝖠𝖳𝖤 𝖴𝖲𝖠𝖭𝖣𝖮:\n> ୨🌑ৎ #${verifyaleatorio} ${user2}.${edadaleatoria}`,
-restrict: `˚🌑｡ Esta caracteristica está desactivada.`
+  rowner: `˚🌑｡ El comando *comando* solo puede ser usado por los ᴄʀᴇᴀᴅᴏʀᴇs del ʙᴏᴛ.`,
+  owner: `˚🌑｡ El comando *{comando}* solo puede ser usado por los ᴅᴇsᴀʀʀᴏʟʟᴀᴅᴏʀᴇs del ʙᴏᴛ.`,
+  mods: `˚🌑｡ El comando *comando* solo puede ser usado por los ᴍᴏᴅᴇʀᴀᴅᴏʀᴇs del ʙᴏᴛ.`,
+  premium: `˚🌑｡ El comando *{comando}* solo puede ser usado por los ᴜsᴜᴀʀɪᴏs ᴘʀᴇᴍɪᴜᴍ.`,
+  group: `˚🌑｡ El comando *comando* solo puede ser usado en ɢʀᴜᴘᴏs.`,
+  private: `˚🌑｡ El comando *{comando}* solo puede ser usado en el ᴄʜᴀᴛ ᴘʀɪᴠᴀᴅᴏ del ʙᴏᴛ.`,
+  admin: `˚🌑｡ El comando *comando* solo puede ser usado por los ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs del ɢʀᴜᴘᴏ.`,
+  botAdmin: `˚🌑｡ Para ejecutar el comando *{comando}* ᴅᴇʙᴏ sᴇʀ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ del ɢʀᴜᴘᴏ.`,
+  unreg: `˚🌑｡ El comando *comando* solo puede ser usado por ᴜsᴜᴀʀɪᴏs ʀᴇɢɪsᴛʀᴀᴅᴏs. ᴜsᴀɴᴅᴏ:> ୨🌑ৎ #${verifyaleatorio} ${user2}.${edadaleatoria}`,
+  restrict: `˚🌑｡ Esta ᴄᴀʀᴀᴄᴛᴇʀɪ́sᴛɪᴄᴀ ᴇsᴛᴀ́ ᴅᴇsᴀᴄᴛɪᴠᴀᴅᴀ.`
 }[type];
 if (msg) return m.reply(msg).then(_ => m.react('✖️'))}
 
