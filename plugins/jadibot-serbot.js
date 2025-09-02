@@ -56,7 +56,7 @@ let rtx2 = `
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const yukiJBOptions = {}
+const obitoJBOptions = {}
 if (global.conns instanceof Array) console.log()
 else global.conns = []
 let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
@@ -72,9 +72,9 @@ return m.reply(`${emoji2} No se han encontrado espacios para *Sub-Bots* disponib
 }
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let id = `${who.split`@`[0]}`
-let pathYukiJadiBot = path.join(`./${jadi}/`, id)
-if (!fs.existsSync(pathYukiJadiBot)){
-fs.mkdirSync(pathYukiJadiBot, { recursive: true })
+let pathObitoJadiBot = path.join(`./${jadi}/`, id)
+if (!fs.existsSync(pathObitoJadiBot)){
+fs.mkdirSync(pathObitoJadiBot, { recursive: true })
 }
 obitoJBOptions.pathObitoJadiBot = pathObitoJadiBot
 obitoJBOptions.m = m
