@@ -76,14 +76,14 @@ let pathYukiJadiBot = path.join(`./${jadi}/`, id)
 if (!fs.existsSync(pathYukiJadiBot)){
 fs.mkdirSync(pathYukiJadiBot, { recursive: true })
 }
-yukiJBOptions.pathYukiJadiBot = pathYukiJadiBot
-yukiJBOptions.m = m
-yukiJBOptions.conn = conn
-yukiJBOptions.args = args
-yukiJBOptions.usedPrefix = usedPrefix
-yukiJBOptions.command = command
-yukiJBOptions.fromCommand = true
-yukiJadiBot(yukiJBOptions)
+obitoJBOptions.pathObitoJadiBot = pathObitoJadiBot
+obitoJBOptions.m = m
+obitoJBOptions.conn = conn
+obitoJBOptions.args = args
+obitoJBOptions.usedPrefix = usedPrefix
+obitoJBOptions.command = command
+obitoJBOptions.fromCommand = true
+obitoJadiBot(obitoJBOptions)
 global.db.data.users[m.sender].Subs = new Date * 1
 } 
 handler.help = ['qr', 'code']
@@ -91,7 +91,7 @@ handler.tags = ['serbot']
 handler.command = ['qr', 'code']
 export default handler 
 
-export async function yukiJadiBot(options) {
+export async function obitoJadiBot(options) {
 let { pathObitoJadiBot, m, conn, args, usedPrefix, command } = options
 if (command === 'code') {
 command = 'qr'; 
