@@ -11,7 +11,7 @@ import moment from 'moment-timezone'
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
 //Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
-global.botNumber = '' //Ejemplo: 573218138672
+global.botNumber = '' //Ejemplo: 5491156178758
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -36,7 +36,7 @@ global.nameqr = 'The-fede_IA'
 global.namebot = 'The-fede_IA'
 global.sessions = 'Sessions'
 global.jadi = 'JadiBots' 
-global.yukiJadibts = true
+global.obitoJadiBot = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -51,10 +51,6 @@ global.etiqueta = '🎄 𝖮𝖻𝗂𝗍𝗈-𝖡𝗈𝗍_𝖬𝖣 🎋'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.moneda = 'ObiCoins 💸'
-global.welcom1 = '🌑 Edita Con El Comando setwelcome'
-global.welcom2 = '🌑 Edita Con El Comando setbye'
-global.banner = 'https://files.cloudkuimages.guru/images/wn5uChxB.jpg'
-global.avatar = 'https://files.cloudkuimages.guru/images/BOX7T4AJ.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
