@@ -128,7 +128,7 @@ printQRInTerminal: false,
 auth: { creds: state.creds, keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})) },
 msgRetry,
 msgRetryCache,
-browser: mcode ? Browsers.macOS("OBITO-BOT") : Browsers.macOS("Dev-fedexyz13"),
+browser: mcode ? Browsers.macOS("OBITO-BOT") : Browsers.macOS("Dev-fedexyz"),
 version: version,
 generateHighQualityLinkPreview: true
 };
